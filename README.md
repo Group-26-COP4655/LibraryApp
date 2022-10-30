@@ -1,5 +1,3 @@
-An app for users to have access to free books
-
 Original App Design Project - README
 ===
 
@@ -26,12 +24,15 @@ Original App Design Project - README
 
 ## Product Spec
 
-### 1. User Stories (Required and Optional)
+### 1. User Stories
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can see and click on the app icon to open app
+* User sees a styled launch screen while the app launches
+* User sees a screen with a button to login and a button to sign up
+* User can click on login to be taken to login screen (that has the app name, a username field, and a password field) or
+* 
 
 **Optional Nice-to-have Stories**
 
