@@ -1,6 +1,6 @@
-# Group-26
 
 Original App Design Project - README
+## Group-26
 ===
 
 # LibsterApp
