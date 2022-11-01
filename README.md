@@ -15,6 +15,7 @@ Original App Design Project - README
 ## Overview
 
 Description
+
 A library app where a user may sign up/sign in/sign out, and browse through a collection of books. The user can utilize a navigation bar to navigate the app and can use a search bar to find books or sort them based on numerous search criteria like author/genre/rating. The user can also bookmark books for later reading and see all owned books on a library page, including bookmarked ones.
 
 App Evaluation
