@@ -21,7 +21,6 @@ use a search bar to find books or sort them based on numerous search criteria li
 owned books on a library page, including bookmarked ones.
 
 App Evaluation
-[Evaluation of your app across the following attributes]
 
 Category: Books/Productivity
 
