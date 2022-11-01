@@ -24,16 +24,21 @@ App Evaluation
 [Evaluation of your app across the following attributes]
 
 Category: Books/Productivity
+
 Mobile: This app would initally be developed for mobile but could easily have its features ported to a computer application or even a website application. The 
 potential features on a computer or web app would be almost the same as the mobile features, allowing for a seamless transition if it was decided to have such 
 applications.
+
 Story: User signs up for an account or logs in and can select to pick up on a book they have already bookmarked, or search through a selection of books, finding the 
 right one for them based on numerous kinds of search criteria. When the users wants to stop for now, they will bookmark the current page and it will save to their 
 library.
+
 Market: Individuals using this app would be any avid book reader or anyone would like to easy access to books in general. Since the app makes it very convenient to 
 read and pick up where you left off, readers of all levels and frequencies would enjoy the app.
+
 Habit: The usage of this app would depend entirely on the user. If they are used to often reading books, they may use it much more frequencty than other users. 
 However, this app would be used especially for instances of travel, where it is more convenient to have books stored in an app rather than carrying physical copies.
+
 Scope: At the begining our app would likely have a limited selection of books but we could exand this in the future. We could also expand the features, with the 
 possibility of adding audiobooks and more accessibility options.
 
