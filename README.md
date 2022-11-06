@@ -261,6 +261,8 @@ possibility of adding audiobooks and more accessibility options.
 
 
 ### Networking
-- [Add list of network requests by screen ]
+
+- List of network requests by screen
+
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
