@@ -315,7 +315,7 @@ Open Library
 
    * BASE URL - https://openlibrary.org/developers/api
 
-      | HTTP VERB     | ENDPOINT                                          | Description                                  |
+      | HTTP Verb     | Endpoint                                          | Description                                  |
       | ------------- | -------------                                     | -------------                                |
       | `GET`         | /search.json?q=query                              | Search for books                             |
       | `GET`         | /authors.json?q=query                             | Search for authors                           |
