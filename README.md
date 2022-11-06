@@ -88,6 +88,7 @@ possibility of adding audiobooks and more accessibility options.
 * User can add friends
 * User can share their library
 * User can direct message friends
+* Can see and post reviews
 
 
 ### 2. Screen Archetypes
