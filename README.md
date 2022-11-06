@@ -314,3 +314,15 @@ Existing API Endpoints
 Open Library
 
    * BASE URL - https://openlibrary.org/developers/api
+
+      | HTTP VERB          | ENDPOINT           | Description                                                                        |
+      | -------------      | -------------      | -------------                                                                      |
+      | GET                | String             | An alphanumeric string uniquely identifying a user object                          |
+      | Username           | String             | The name chosen for an account that is displayed on the user's profile page        |
+      | Email              | String             | An email to be tied to an account                                                  |
+      | Profile Picture    | File               | An image that is displayed on the user's profile page                              |
+      | Bio                | String             | A description of the user that is displayed on the user's profile page             |
+      | Borrowed Books     | Array of Pointers  | Pointers to each book object of the books that the user has borrowed               |
+      | Bookmarks          | Pointer            | Pointer to the bookmark object                                                     |
+      | Favorites          | Array of Pointers  | Pointers to each book object of the books that the user has favorited              |
+      | Friends            | Array of Pointers  | Pointers to each user object of the users who have been friended                   |
