@@ -223,7 +223,7 @@ possibility of adding audiobooks and more accessibility options.
 | Profile Picture    | File               | An image that is displayed on the user's profile page                              |
 | Bio                | String             | A description of the user that is displayed on the user's profile page             |
 | Borrowed Books     | Array of Pointers  | Pointers to each book object of the books that the user has borrowed               |
-| Bookmarks          | Array of Integers  | The page numbers of each book that the user has bookmarked                         |
+| Bookmarks          | Pointer            | Pointer to the bookmark object                                                     |
 | Favorites          | Array of Pointers  | Pointers to each book object of the books that the user has favorited              |
 | Friends            | Array of Pointers  | Pointers to each user object of the users who have been friended                   |
 
@@ -249,15 +249,23 @@ possibility of adding audiobooks and more accessibility options.
 | Date Published     | String             | The date the book was published                                                    |
 | Rating             | Float              | A decimal value representing how will liked is the book                            |
 | Readers            | Integer            | The number of people who have the book in their library                            |
+| Book               | String             | The link to the book                                                               |
+| Bookmark           | String             | The link of the last page read by the reader                                       |
 
 #### Bookmark
 
 | Property           | Type               | Description                                                                        |
 | -------------      | -------------      | -------------                                                                      |
-| Book Id Array      | Array of Pointers  | An array of the alphanumeric strings uniquely identifying each book object         |
-| Page Number        | Array of Integers  | The page number of the selected bookmark for each book in 'Book Id Array'          |
+| Book Id            | Pointer            | An array of pointers to strings uniquely identifying each book object              |
+| Page Number        | Integer            | The page number of the selected bookmark                                           |
 | Sentence           | String             | The exact sentence where the reader stopped reading                                |
 | Last Read          | String             | The date and time the reader last read the book                                    |
+
+#### Popular 20
+
+| Property           | Type               | Description                                                                        |
+| -------------      | -------------      | -------------                                                                      |
+| Popular Books      | Array of Pointers  | Array of pointers to each book object that for each of the 20 most popular books   |
 
 
 ### Networking
@@ -265,17 +273,41 @@ possibility of adding audiobooks and more accessibility options.
 List of network requests by screen
 
    * Login Screen
-      * Test 1
+      * (Read/GET) Query Parse for username and password
+    
+   * Signup Screen
+      * (Read/GET) Query Parse for username (to see if it already exists) 
+      * (Read/GET) Query Parse for email (to see if it already exists)
     
    * Loading Screen
+      * (Read/GET) Query Parse for an instance of the 'User' object 
+      * (Create/POST) Add a new row in Parse 'User' table
+      * (Read/GET) Query Parse for the 'Popular 20' object 
 
    * Dashboard Screen
+      * (Read/GET) Query Parse for an instance of the 'Book' object
 
-   * Bookmarks Screen
+   * Details Screen
+      * (Update/PUT) Append a 'Book' object to the 'Favorites' array
+      * (Update/PUT) Remove a 'Book' object from the 'Favorites' array
+
+   * Book Screen
+      * (Create/POST) Add a new row to the 'Bookmark' table
+      * (Delete) Delete a row from the 'Bookmark' table
 
    * Selection Screen
+      * (Read/GET) Query Open Library API to look for a book or collection of books
+      * (Read/GET) Query Open Library API for the details of a selected book
+
+   * Checkout Screen
+      * (Update/PUT) Change the number of 'readers' in the selected 'Book' object
 
    * Profile Screen
+      * (DELETE) Remove the current user's row from the 'User' table (when account is deleted)
+      * (Update/PUT) Append a 'User' object to the 'Friends' array
+      * (Update/PUT) Remove a 'User' object from the 'Friends' array
+      * (Update/PUT) Change the image used for the 'Profile Picture'
+      * (Update/PUT) Change the string used for the 'Bio'
 
 <!-- - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp] -->
