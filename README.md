@@ -273,41 +273,60 @@ possibility of adding audiobooks and more accessibility options.
 List of network requests by screen
 
    * Login Screen
-      * (Read/GET) Query Parse for username and password
+      * (Read/GET) Query Parse for username and password 
+      [Create basic snippets for each Parse network request] (picture here)
     
    * Signup Screen
       * (Read/GET) Query Parse for username (to see if it already exists) 
+      [Create basic snippets for each Parse network request] (picture here)
       * (Read/GET) Query Parse for email (to see if it already exists)
+      [Create basic snippets for each Parse network request] (picture here)
     
    * Loading Screen
-      * (Read/GET) Query Parse for an instance of the 'User' object 
+      * (Read/GET) Query Parse for an instance of the 'User' object
+      [Create basic snippets for each Parse network request] (picture here) 
       * (Create/POST) Add a new row in Parse 'User' table
-      * (Read/GET) Query Parse for the 'Popular 20' object 
+      [Create basic snippets for each Parse network request] (picture here)
+      * (Read/GET) Query Parse for the 'Popular 20' object
+      [Create basic snippets for each Parse network request] (picture here) 
 
    * Dashboard Screen
       * (Read/GET) Query Parse for an instance of the 'Book' object
+      [Create basic snippets for each Parse network request] (picture here)
 
    * Details Screen
       * (Update/PUT) Append a 'Book' object to the 'Favorites' array
+      [Create basic snippets for each Parse network request] (picture here)
       * (Update/PUT) Remove a 'Book' object from the 'Favorites' array
+      [Create basic snippets for each Parse network request] (picture here)
 
    * Book Screen
       * (Create/POST) Add a new row to the 'Bookmark' table
+      [Create basic snippets for each Parse network request] (picture here)
       * (Delete) Delete a row from the 'Bookmark' table
+      [Create basic snippets for each Parse network request] (picture here)
 
    * Selection Screen
       * (Read/GET) Query Open Library API to look for a book or collection of books
+      [Create basic snippets for each Parse network request] (picture here)
       * (Read/GET) Query Open Library API for the details of a selected book
+      [Create basic snippets for each Parse network request] (picture here)
 
    * Checkout Screen
       * (Update/PUT) Change the number of 'readers' in the selected 'Book' object
+      [Create basic snippets for each Parse network request] (picture here)
 
    * Profile Screen
       * (DELETE) Remove the current user's row from the 'User' table (when account is deleted)
+      [Create basic snippets for each Parse network request] (picture here)
       * (Update/PUT) Append a 'User' object to the 'Friends' array
+      [Create basic snippets for each Parse network request] (picture here)
       * (Update/PUT) Remove a 'User' object from the 'Friends' array
+      [Create basic snippets for each Parse network request] (picture here)
       * (Update/PUT) Change the image used for the 'Profile Picture'
+      [Create basic snippets for each Parse network request] (picture here)
       * (Update/PUT) Change the string used for the 'Bio'
+      [Create basic snippets for each Parse network request] (picture here)
 
 Existing API Endpoints
 
