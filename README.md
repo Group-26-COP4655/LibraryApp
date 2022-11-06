@@ -264,8 +264,18 @@ possibility of adding audiobooks and more accessibility options.
 
 List of network requests by screen
 
-    * Test 1
-       * Test 2
+   * Login Screen
+      * Test 1
+    
+   * Loading Screen
 
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+   * Dashboard Screen
+
+   * Bookmarks Screen
+
+   * Selection Screen
+
+   * Profile Screen
+
+<!-- - [Create basic snippets for each Parse network request]
+- [OPTIONAL: List endpoints if using existing API such as Yelp] -->
