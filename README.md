@@ -217,7 +217,7 @@ possibility of adding audiobooks and more accessibility options.
 
 | Property           | Type               | Description                                                                        |
 | -------------      | -------------      | -------------                                                                      |
-| UserId             | String             | An alphanumeric string uniquely identifying a user object                          |
+| User Id            | String             | An alphanumeric string uniquely identifying a user object                          |
 | Username           | String             | The name chosen for an account that is displayed on the user's profile page        |
 | Email              | String             | An email to be tied to an account                                                  |
 | Profile Picture    | File               | An image that is displayed on the user's profile page                              |
@@ -231,7 +231,7 @@ possibility of adding audiobooks and more accessibility options.
 
 | Property           | Type               | Description                                                                        |
 | -------------      | -------------      | -------------                                                                      |
-| AuthorId           | String             | An alphanumeric string uniquely identifying an author object                       |
+| Author Id          | String             | An alphanumeric string uniquely identifying an author object                       |
 | Name               | String             | The name of the author                                                             |
 | Works              | Array of Pointers  | Pointers to each book object of the books written by the author                    |
 
@@ -239,30 +239,26 @@ possibility of adding audiobooks and more accessibility options.
 
 | Property           | Type               | Description                                                                        |
 | -------------      | -------------      | -------------                                                                      |
-| BookId             | String             | An alphanumeric string uniquely identifying a user object                          |
-| Title              | String             | The name chosen for an account that is displayed on the user's profile page        |
-| Author             | String             | An email to be tied to an account                                                  |
-| Cover              | File               | Pointers to each user object of the users who have been friended                   |
-| ISBN               | String             | An image that is displayed on the user's profile page                              |
-| Genre              | String             | A description of the user that is displayed on the user's profile page             |
-| Summary            | String             | Pointers to each book object of the books that the user has borrowed               |
-| Date Published     | String             | The page numbers of each book that the user has bookmarked                         |
-| Rating             | Float              | Pointers to each book object of the books that the user has favorited              |
-| Readers            | Integer            | Pointers to each user object of the users who have been friended                   |
+| Book Id            | String             | An alphanumeric string uniquely identifying a book object                          |
+| Title              | String             | The name of the book                                                               |
+| Author             | String             | The name of the author                                                             |
+| Cover              | File               | An image that is displayed on the book details page                                |
+| ISBN               | String             | A numeric string uniquely identifying a book                                       |
+| Genre              | String             | The content by which the book is categorized                                       |
+| Summary            | String             | A description of the book's plot                                                   |
+| Date Published     | String             | The date the book was published                                                    |
+| Rating             | Float              | A decimal value representing how will liked is the book                            |
+| Readers            | Integer            | The number of people who have the book in their library                            |
 
 #### Bookmark
 
 | Property           | Type               | Description                                                                        |
 | -------------      | -------------      | -------------                                                                      |
-| BookIdArr          | Array of Pointers  | An alphanumeric string uniquely identifying a user object                          |
-| Page Number        | Array of Integers  | The name chosen for an account that is displayed on the user's profile page        |
-| Sentence           | String             | An email to be tied to an account                                                  |
-| Last Read          | String             | An image that is displayed on the user's profile page                              |
-| Bio                | String             | A description of the user that is displayed on the user's profile page             |
-| Borrowed Books     | Array of Pointers  | Pointers to each book object of the books that the user has borrowed               |
-| Bookmarks          | Array of Integers  | The page numbers of each book that the user has bookmarked                         |
-| Favorites          | Array of Pointers  | Pointers to each book object of the books that the user has favorited              |
-| Friends            | Array of Pointers  | Pointers to each user object of the users who have been friended                   |
+| Book Id Array      | Array of Pointers  | An array of the alphanumeric strings uniquely identifying each book object         |
+| Page Number        | Array of Integers  | The page number of the selected bookmark for each book in 'Book Id Array'          |
+| Sentence           | String             | The exact sentence where the reader stopped reading                                |
+| Last Read          | String             | The date and time the reader last read the book                                    |
+
 
 ### Networking
 - [Add list of network requests by screen ]
