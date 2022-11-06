@@ -227,6 +227,43 @@ possibility of adding audiobooks and more accessibility options.
 | Favorites          | Array of Pointers  | Pointers to each book object of the books that the user has favorited              |
 | Friends            | Array of Pointers  | Pointers to each user object of the users who have been friended                   |
 
+#### Author
+
+| Property           | Type               | Description                                                                        |
+| -------------      | -------------      | -------------                                                                      |
+| AuthorId           | String             | An alphanumeric string uniquely identifying an author object                       |
+| Name               | String             | The name of the author                                                             |
+| Works              | Array of Pointers  | Pointers to each book object of the books written by the author                    |
+
+#### Book
+
+| Property           | Type               | Description                                                                        |
+| -------------      | -------------      | -------------                                                                      |
+| BookId             | String             | An alphanumeric string uniquely identifying a user object                          |
+| Title              | String             | The name chosen for an account that is displayed on the user's profile page        |
+| Author             | String             | An email to be tied to an account                                                  |
+| Cover              | File               | Pointers to each user object of the users who have been friended                   |
+| ISBN               | String             | An image that is displayed on the user's profile page                              |
+| Genre              | String             | A description of the user that is displayed on the user's profile page             |
+| Summary            | String             | Pointers to each book object of the books that the user has borrowed               |
+| Date Published     | String             | The page numbers of each book that the user has bookmarked                         |
+| Rating             | Float              | Pointers to each book object of the books that the user has favorited              |
+| Readers            | Integer            | Pointers to each user object of the users who have been friended                   |
+
+#### Bookmark
+
+| Property           | Type               | Description                                                                        |
+| -------------      | -------------      | -------------                                                                      |
+| BookIdArr          | Array of Pointers  | An alphanumeric string uniquely identifying a user object                          |
+| Page Number        | Array of Integers  | The name chosen for an account that is displayed on the user's profile page        |
+| Sentence           | String             | An email to be tied to an account                                                  |
+| Last Read          | String             | An image that is displayed on the user's profile page                              |
+| Bio                | String             | A description of the user that is displayed on the user's profile page             |
+| Borrowed Books     | Array of Pointers  | Pointers to each book object of the books that the user has borrowed               |
+| Bookmarks          | Array of Integers  | The page numbers of each book that the user has bookmarked                         |
+| Favorites          | Array of Pointers  | Pointers to each book object of the books that the user has favorited              |
+| Friends            | Array of Pointers  | Pointers to each user object of the users who have been friended                   |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
