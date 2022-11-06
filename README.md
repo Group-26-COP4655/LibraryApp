@@ -326,3 +326,12 @@ Open Library
       | Bookmarks          | Pointer            | Pointer to the bookmark object                                                     |
       | Favorites          | Array of Pointers  | Pointers to each book object of the books that the user has favorited              |
       | Friends            | Array of Pointers  | Pointers to each user object of the users who have been friended                   |
+      
+      
+      ┌─────────────┐     ╭─────────╮     ┏━━━━━━┓
+        │ I'm a box!  ├─────┤ Rounded ┝━━━━━┫ Bold ┃
+        └──────┬──────┘     ╰─────────╯     ┗━━━━━━┛
+               │
+         ┌─────┴────┐      ┌──────────┐
+         │ Me too!  ├──────┤ Me Three │
+         └──────────┘      └──────────┘
