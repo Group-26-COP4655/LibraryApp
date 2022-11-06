@@ -317,7 +317,7 @@ Open Library
 
       | HTTP VERB          | ENDPOINT           | Description                                                                        |
       | -------------      | -------------      | -------------                                                                      |
-      | GET                | String             | An alphanumeric string uniquely identifying a user object                          |
+      | `GET`                | String             | An alphanumeric string uniquely identifying a user object                          |
       | Username           | String             | The name chosen for an account that is displayed on the user's profile page        |
       | Email              | String             | An email to be tied to an account                                                  |
       | Profile Picture    | File               | An image that is displayed on the user's profile page                              |
@@ -327,11 +327,3 @@ Open Library
       | Favorites          | Array of Pointers  | Pointers to each book object of the books that the user has favorited              |
       | Friends            | Array of Pointers  | Pointers to each user object of the users who have been friended                   |
       
-      
-        ┌─────────────┐     ╭─────────╮     ┏━━━━━━┓
-        │ I'm a box!  ├─────┤ Rounded ┝━━━━━┫ Bold ┃
-        └──────┬──────┘     ╰─────────╯     ┗━━━━━━┛
-               │
-         ┌─────┴────┐      ┌──────────┐
-         │ Me too!  ├──────┤ Me Three │
-         └──────────┘      └──────────┘
