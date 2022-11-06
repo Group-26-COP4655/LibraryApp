@@ -309,5 +309,8 @@ List of network requests by screen
       * (Update/PUT) Change the image used for the 'Profile Picture'
       * (Update/PUT) Change the string used for the 'Bio'
 
-<!-- - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp] -->
+Existing API Endpoints
+
+Open Library
+
+   * BASE URL - https://openlibrary.org/developers/api
