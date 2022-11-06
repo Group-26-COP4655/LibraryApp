@@ -328,7 +328,7 @@ Open Library
       | Friends            | Array of Pointers  | Pointers to each user object of the users who have been friended                   |
       
       
-      ┌─────────────┐     ╭─────────╮     ┏━━━━━━┓
+        ┌─────────────┐     ╭─────────╮     ┏━━━━━━┓
         │ I'm a box!  ├─────┤ Rounded ┝━━━━━┫ Bold ┃
         └──────┬──────┘     ╰─────────╯     ┗━━━━━━┛
                │
