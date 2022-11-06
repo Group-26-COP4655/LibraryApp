@@ -315,15 +315,11 @@ Open Library
 
    * BASE URL - https://openlibrary.org/developers/api
 
-      | HTTP VERB          | ENDPOINT           | Description                                                                        |
-      | -------------      | -------------      | -------------                                                                      |
-      | `GET`                | String             | An alphanumeric string uniquely identifying a user object                          |
-      | Username           | String             | The name chosen for an account that is displayed on the user's profile page        |
-      | Email              | String             | An email to be tied to an account                                                  |
-      | Profile Picture    | File               | An image that is displayed on the user's profile page                              |
-      | Bio                | String             | A description of the user that is displayed on the user's profile page             |
-      | Borrowed Books     | Array of Pointers  | Pointers to each book object of the books that the user has borrowed               |
-      | Bookmarks          | Pointer            | Pointer to the bookmark object                                                     |
-      | Favorites          | Array of Pointers  | Pointers to each book object of the books that the user has favorited              |
-      | Friends            | Array of Pointers  | Pointers to each user object of the users who have been friended                   |
+      | HTTP VERB     | ENDPOINT                                          | Description                                  |
+      | ------------- | -------------                                     | -------------                                |
+      | `GET`         | /search.json?q=query                              | Search for books                             |
+      | `GET`         | /authors.json?q=query                             | Search for authors                           |
+      | `GET`         | /authors/key/works.json                           | Get works of an author                       |
+      | `GET`         | /volumes/brief/isbn/key.json                      | Get the link to read a book                  |
+      | `GET`         | /books?bibkeys=ISBN:key&jscmd=details&format=json | Get the details of a book                    |
       
