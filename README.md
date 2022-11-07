@@ -277,9 +277,7 @@ List of network requests by screen
       [Create basic snippets for each Parse network request] (picture here)
     
    * Signup Screen
-      * (Read/GET) Query Parse for username (to see if it already exists) 
-      [Create basic snippets for each Parse network request] (picture here)
-      * (Read/GET) Query Parse for email (to see if it already exists)
+      * (Create/POST) Add a new user to the parse server 
       [Create basic snippets for each Parse network request] (picture here)
     
    * Loading Screen
