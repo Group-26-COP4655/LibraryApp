@@ -275,6 +275,8 @@ List of network requests by screen
    * Login Screen
       * (Read/GET) Query Parse for username and password 
       ```swift
+      let username = usernameField.text!
+      let password = passwordField.text!
       PFUser.logInWithUsername(inBackground: username, password: password){
             (user, error) in
             if user != nil{
@@ -287,7 +289,18 @@ List of network requests by screen
     
    * Signup Screen
       * (Create/POST) Add a new user to the parse server 
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      let user = PFUser()
+      user.username = usernameField.text
+      user.password = passwordFIeld.text
+      user.signUpInBackground{ (success, error) in
+          if success {
+              self.performSegue(withIdentifier: "loginSegue", sender: nil)
+          } else {
+              print("Error: \(String(describing: error?.localizedDescription))")
+          }
+        }
+        ```
     
    * Loading Screen
       * (Read/GET) Query Parse for an instance of the 'User' object
@@ -303,9 +316,42 @@ List of network requests by screen
 
    * Details Screen
       * (Update/PUT) Append a 'Book' object to the 'Favorites' array
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      let book = PFObject(className: "Favorites")
+        book["id"] = 
+        book["title"] = 
+        book["author"] = 
+        book["cover"] = 
+        book["ISBN"] = 
+        book["genre"] = 
+        book["summary"] =
+        book["publishDate"] =
+        book["rating"] =
+        book["readers"] = 
+        book["bookLink"] = 
+        book["bookmark"] = 
+        book.saveInBackground{ (success, error) in
+            if success {
+                print("saved!")
+            }else{
+                print("error!")
+            }
+        }
+      ```
       * (Update/PUT) Remove a 'Book' object from the 'Favorites' array
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      bookToDelete = book.id //book passed in with function
+      var query = PFQuery(className:"Favorites")
+      query.getObjectInBackgroundWithId(bookToDelete) {
+        (parseObject: PFObject?, error: NSError?) -> Void in
+        if error != nil {
+          print(error)
+        } else if parseObject != nil {
+            parseObject.deleteInBackground()
+          }
+        }
+      }
+      ```
 
    * Book Screen
       * (Create/POST) Add a new row to the 'Bookmark' table
