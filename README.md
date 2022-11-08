@@ -288,7 +288,7 @@ List of network requests by screen
         ```
     
    * Signup Screen
-      * (Create/POST) Add a new user to the parse server 
+      * (Create/POST) Add a User as a new row to the User table of the parse server 
       ```swift
       let user = PFUser()
       user.username = usernameField.text
@@ -305,8 +305,6 @@ List of network requests by screen
    * Loading Screen
       * (Read/GET) Query Parse for an instance of the 'User' object
       [Create basic snippets for each Parse network request] (picture here) 
-      * (Create/POST) Add a new row in Parse 'User' table
-      [Create basic snippets for each Parse network request] (picture here)
       * (Read/GET) Query Parse for the 'Popular 20' object
       [Create basic snippets for each Parse network request] (picture here) 
 
