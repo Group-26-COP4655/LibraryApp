@@ -274,7 +274,16 @@ List of network requests by screen
 
    * Login Screen
       * (Read/GET) Query Parse for username and password 
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      PFUser.logInWithUsername(inBackground: username, password: password){
+            (user, error) in
+            if user != nil{
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }else{
+                print("Error: \(String(describing: error?.localizedDescription))")
+            }
+        }
+        ```
     
    * Signup Screen
       * (Create/POST) Add a new user to the parse server 
