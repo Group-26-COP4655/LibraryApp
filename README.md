@@ -411,6 +411,9 @@ List of network requests by screen
 
    * Selection Screen
       * (Read/GET) Query Open Library API to look for a book or collection of books
+      
+      
+      * (Read/GET) Query Open Library API for the details of a selected book
       ```swift
       var url : String = "[http://google.com?test=toto&test2=titi](https://openlibrary.org/api/books?                                       
       bibkeys=ISBN:9780980200447&jscmd=details&format=json)"
@@ -427,15 +430,9 @@ List of network requests by screen
       } else {
        // couldn't load JSON, look at error
       }
-
-
       })
       ```
-
-      [[Create basic snippets for each Parse network request] (picture here)](https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&jscmd=details&format=json)
-      * (Read/GET) Query Open Library API for the details of a selected book
-      [Create basic snippets for each Parse network request] (picture here)
-
+      
    * Checkout Screen
       * (Update/PUT) Change the number of 'readers' in the selected 'Book' object
       [Create basic snippets for each Parse network request] (picture here)
