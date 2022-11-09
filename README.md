@@ -318,7 +318,16 @@ List of network requests by screen
       ```
         
       * (Read/GET) Query Parse for the 'Popular 20' object
-      [Create basic snippets for each Parse network request] (picture here) 
+      ```swift
+      let query = PFQuery(className:"Popular")
+      query.getObjectInBackground(withId: "8IhEeAImgN") { (top, error) in
+          if error == nil {
+              print(top)
+          } else {
+              // Fail!
+          }
+      }
+      ``` 
 
    * Dashboard Screen
       * (Read/GET) Query Parse for an instance of the 'Book' object
