@@ -335,28 +335,7 @@ List of network requests by screen
 
    * Details Screen
       * (Update/PUT) Append a 'Book' object to the 'Favorites' array
-      ```swift
-      let book = PFObject(className: "Favorites")
-        book["id"] = 
-        book["title"] = 
-        book["author"] = 
-        book["cover"] = 
-        book["ISBN"] = 
-        book["genre"] = 
-        book["summary"] =
-        book["publishDate"] =
-        book["rating"] =
-        book["readers"] = 
-        book["bookLink"] = 
-        book["bookmark"] = 
-        book.saveInBackground{ (success, error) in
-            if success {
-                print("saved!")
-            }else{
-                print("error!")
-            }
-        }
-      ```
+      [Create basic snippets for each Parse network request] (picture here)
       * (Update/PUT) Remove a 'Book' object from the 'Favorites' array
       ```swift
       bookToDelete = book.id //book passed in with function
