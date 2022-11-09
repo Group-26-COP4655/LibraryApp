@@ -390,7 +390,7 @@ List of network requests by screen
           if let error = error {
              print(error.localizedDescription)
           } else if let account = account {
-             account["favorites"] = bookmarkObjArr
+             account["bookmarks"] = bookmarkObjArr
              account.saveInBackground()
          }
       }
@@ -403,7 +403,7 @@ List of network requests by screen
           if let error = error {
              print(error.localizedDescription)
           } else if let account = account {
-             account["favorites"] = bookmarkObjArr
+             account["bookmarks"] = bookmarkObjArr
              account.saveInBackground()
          }
       }
@@ -411,12 +411,8 @@ List of network requests by screen
 
    * Selection Screen
       * (Read/GET) Query Open Library API to look for a book or collection of books
-      
-      
-      * (Read/GET) Query Open Library API for the details of a selected book
       ```swift
-      var url : String = "[http://google.com?test=toto&test2=titi](https://openlibrary.org/api/books?                                       
-      bibkeys=ISBN:9780980200447&jscmd=details&format=json)"
+      var url : String = "https://openlibrary.org/search.json?q=<search key>"
       var request : NSMutableURLRequest = NSMutableURLRequest()
       request.URL = NSURL(string: url)
       request.HTTPMethod = "GET"
@@ -433,21 +429,89 @@ List of network requests by screen
       })
       ```
       
-   * Checkout Screen
-      * (Update/PUT) Change the number of 'readers' in the selected 'Book' object
-      [Create basic snippets for each Parse network request] (picture here)
+      * (Read/GET) Query Open Library API for the details of a selected book
+      ```swift
+      var url : String = "https://openlibrary.org/api/books?                                       
+      bibkeys=ISBN:9780980200447&jscmd=details&format=json"
+      var request : NSMutableURLRequest = NSMutableURLRequest()
+      request.URL = NSURL(string: url)
+      request.HTTPMethod = "GET"
+
+      NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error:         NSError!) -> Void in
+      var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
+      let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as?           NSDictionary
+
+      if (jsonResult != nil) {
+        // process jsonResult
+      } else {
+       // couldn't load JSON, look at error
+      }
+      })
+      ```
 
    * Profile Screen
-      * (DELETE) Remove the current user's row from the 'User' table (when account is deleted)
-      [Create basic snippets for each Parse network request] (picture here)
+      * (DELETE) Remove the current user's account row from the 'User' table (when account is deleted)
+      ```swift
+      PFObject.deleteAll(inBackground: objectArray) { (succeeded, error) in
+      if (succeeded) {
+          // The array of objects was successfully deleted.
+      } else {
+          // There was an error. Check the errors localizedDescription.
+          }
+      }
+      ```
+
       * (Update/PUT) Append a 'User' object to the 'Friends' array
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      let query = PFQuery(className:"Accounts")
+      query.getObjectInBackground(withId: "xWMyZEGZ") { (account: PFObject?, error: Error?) in
+          if let error = error {
+             print(error.localizedDescription)
+          } else if let account = account {
+             account["friends"] = friendsObjArr
+             account.saveInBackground()
+         }
+      }
+      ```
+      
       * (Update/PUT) Remove a 'User' object from the 'Friends' array
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      let query = PFQuery(className:"Accounts")
+      query.getObjectInBackground(withId: "xWMyZEGZ") { (account: PFObject?, error: Error?) in
+          if let error = error {
+             print(error.localizedDescription)
+          } else if let account = account {
+             account["friends"] = friendsObjArr
+             account.saveInBackground()
+         }
+      }
+      ```
+      
       * (Update/PUT) Change the image used for the 'Profile Picture'
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      let query = PFQuery(className:"Accounts")
+      query.getObjectInBackground(withId: "xWMyZEGZ") { (account: PFObject?, error: Error?) in
+          if let error = error {
+             print(error.localizedDescription)
+          } else if let account = account {
+             account["profilePicture"] = "profileUrl"
+             account.saveInBackground()
+         }
+      }
+      ```   
+      
       * (Update/PUT) Change the string used for the 'Bio'
-      [Create basic snippets for each Parse network request] (picture here)
+       ```swift
+      let query = PFQuery(className:"Accounts")
+      query.getObjectInBackground(withId: "xWMyZEGZ") { (account: PFObject?, error: Error?) in
+          if let error = error {
+             print(error.localizedDescription)
+          } else if let account = account {
+             account["bio"] = "new bio"
+             account.saveInBackground()
+         }
+      }
+      ```
 
 Existing API Endpoints
 
