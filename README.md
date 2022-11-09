@@ -220,6 +220,11 @@ possibility of adding audiobooks and more accessibility options.
 | User Id            | String             | An alphanumeric string uniquely identifying a user object                          |
 | Username           | String             | The name chosen for an account that is displayed on the user's profile page        |
 | Email              | String             | An email to be tied to an account                                                  |
+
+#### Account
+
+| Property           | Type               | Description                                                                        |
+| -------------      | -------------      | -------------                                                                      |
 | Profile Picture    | File               | An image that is displayed on the user's profile page                              |
 | Bio                | String             | A description of the user that is displayed on the user's profile page             |
 | Borrowed Books     | Array of Pointers  | Pointers to each book object of the books that the user has borrowed               |
@@ -288,7 +293,7 @@ List of network requests by screen
         ```
     
    * Signup Screen
-      * (Create/POST) Add a User as a new row to the User table of the parse server 
+      * (Create/POST) Add a user as a new row to the User table of the parse server 
       ```swift
       let user = PFUser()
       user.username = usernameField.text
@@ -299,8 +304,29 @@ List of network requests by screen
           } else {
               print("Error: \(String(describing: error?.localizedDescription))")
           }
-        }
-        ```
+      }
+      ```
+        
+      * (Create/POST) Add an account as a new row to the 'Accounts' table of the parse server 
+      ```swift
+      var user = PFUser.current()
+      let Account = PFObject(className: "Accounts")
+      print(user)
+      Account["profilePicture"] = "url"
+      Account["bio"] = "ipsem lorem"
+      Account["borrowedBooks"] = []
+      Account["bookmarks"] = []
+      Account["favorites"] = []
+      Account["friends"] = []
+      Account["user"] = user
+      Account.saveInBackground{ (success, error) in
+          if success {
+              print("saved!")
+          }else{
+              print("error!")
+          }
+      }
+      ```
     
    * Loading Screen
       * (Read/GET) Query Parse for an instance of the 'User' object
@@ -329,37 +355,84 @@ List of network requests by screen
       }
       ``` 
 
-   * Dashboard Screen
-      * (Read/GET) Query Parse for an instance of the 'Book' object
-      [Create basic snippets for each Parse network request] (picture here)
-
    * Details Screen
       * (Update/PUT) Append a 'Book' object to the 'Favorites' array
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      let query = PFQuery(className:"Accounts")
+      query.getObjectInBackground(withId: "xWMyZEGZ") { (account: PFObject?, error: Error?) in
+          if let error = error {
+             print(error.localizedDescription)
+          } else if let account = account {
+             account["favorites"] = bookObjArr
+             account.saveInBackground()
+         }
+      }
+      ```
+      
       * (Update/PUT) Remove a 'Book' object from the 'Favorites' array
       ```swift
-      bookToDelete = book.id //book passed in with function
-      var query = PFQuery(className:"Favorites")
-      query.getObjectInBackgroundWithId(bookToDelete) {
-        (parseObject: PFObject?, error: NSError?) -> Void in
-        if error != nil {
-          print(error)
-        } else if parseObject != nil {
-            parseObject.deleteInBackground()
-          }
-        }
+      let query = PFQuery(className:"Accounts")
+      query.getObjectInBackground(withId: "xWMyZEGZ") { (account: PFObject?, error: Error?) in
+          if let error = error {
+             print(error.localizedDescription)
+          } else if let account = account {
+             account["favorites"] = bookObjArr
+             account.saveInBackground()
+         }
       }
       ```
 
    * Book Screen
       * (Update/PUT) Append a 'Bookmark' object to the 'Bookmarks' array
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      let query = PFQuery(className:"Accounts")
+      query.getObjectInBackground(withId: "xWMyZEGZ") { (account: PFObject?, error: Error?) in
+          if let error = error {
+             print(error.localizedDescription)
+          } else if let account = account {
+             account["favorites"] = bookmarkObjArr
+             account.saveInBackground()
+         }
+      }
+      ```
+      
       * (Update/PUT) Remove a 'Bookmark' object from the 'Bookmarks' array
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      let query = PFQuery(className:"Accounts")
+      query.getObjectInBackground(withId: "xWMyZEGZ") { (account: PFObject?, error: Error?) in
+          if let error = error {
+             print(error.localizedDescription)
+          } else if let account = account {
+             account["favorites"] = bookmarkObjArr
+             account.saveInBackground()
+         }
+      }
+      ```
 
    * Selection Screen
       * (Read/GET) Query Open Library API to look for a book or collection of books
-      [Create basic snippets for each Parse network request] (picture here)
+      ```swift
+      var url : String = "[http://google.com?test=toto&test2=titi](https://openlibrary.org/api/books?                                       
+      bibkeys=ISBN:9780980200447&jscmd=details&format=json)"
+      var request : NSMutableURLRequest = NSMutableURLRequest()
+      request.URL = NSURL(string: url)
+      request.HTTPMethod = "GET"
+
+      NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error:         NSError!) -> Void in
+      var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
+      let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as?           NSDictionary
+
+      if (jsonResult != nil) {
+        // process jsonResult
+      } else {
+       // couldn't load JSON, look at error
+      }
+
+
+      })
+      ```
+
+      [[Create basic snippets for each Parse network request] (picture here)](https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&jscmd=details&format=json)
       * (Read/GET) Query Open Library API for the details of a selected book
       [Create basic snippets for each Parse network request] (picture here)
 
