@@ -304,7 +304,19 @@ List of network requests by screen
     
    * Loading Screen
       * (Read/GET) Query Parse for an instance of the 'User' object
-      [Create basic snippets for each Parse network request] (picture here) 
+      ```swift
+      var query = PFUser.query()
+      query!.whereKey("username", equalTo:usernameField.text)
+      do {
+          var queryResult = try (query?.findObjects())
+          var currentUserObj = queryResult! as [PFObject]
+          var currentUser = currentUserObj[0]
+          print(currentUser)
+      } catch {
+          print("User creation failed with error: \(error)")
+      }
+      ```
+        
       * (Read/GET) Query Parse for the 'Popular 20' object
       [Create basic snippets for each Parse network request] (picture here) 
 
@@ -352,9 +364,9 @@ List of network requests by screen
       ```
 
    * Book Screen
-      * (Create/POST) Add a new row to the 'Bookmark' table
+      * (Update/PUT) Append a 'Bookmark' object to the 'Bookmarks' array
       [Create basic snippets for each Parse network request] (picture here)
-      * (Delete) Delete a row from the 'Bookmark' table
+      * (Update/PUT) Remove a 'Bookmark' object from the 'Bookmarks' array
       [Create basic snippets for each Parse network request] (picture here)
 
    * Selection Screen
