@@ -539,13 +539,17 @@ Open Library
 - [X] User sees a styled launch screen while the app launches
 - [X] User can tap on login button to be taken to login screen or
 - [X] User can tap on signup button to be taken to signup screen
-- [X] If logging in, then check if username and password matches in order to go to the dashboard
 - [X] If signing up, then check that the username and email are not already being used
+![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26.gif)
+- [X] If logging in, then check if username and password matches in order to go to the dashboard
 - [X] If there's an error in the process, then the user sees the error displayed
 - [X] Fetch user row and rows of associated tables from the server
 - [X] If signing up, then add a new row to the server table for new user
 - [X] Fetch the top 20 books to be displayed in the selection tab by default
 - [X] User's session is opened and saved
+
+
+
 - [ ] User sees the collection of books that they are borrowing sorted by name of book
 - [ ] User also sees the navigation bar at the bottom of the screen
 - [ ] User can navigate to the bookmarks screen using the navigation bar to continue reading each book
