@@ -540,7 +540,9 @@ Open Library
 - [X] User can tap on login button to be taken to login screen or
 - [X] User can tap on signup button to be taken to signup screen
 - [X] If signing up, then check that the username and email are not already being used
-![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26.gif)
+
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26.gif)
+
 - [X] If logging in, then check if username and password matches in order to go to the dashboard
 - [X] If there's an error in the process, then the user sees the error displayed
 - [X] Fetch user row and rows of associated tables from the server
