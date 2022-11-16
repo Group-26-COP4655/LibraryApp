@@ -48,16 +48,16 @@ possibility of adding audiobooks and more accessibility options.
 
 **Required Must-have Stories**
 
-* User sees and taps on the app icon to open app
-* User sees a styled launch screen while the app launches
-* User can tap on login button to be taken to login screen or
-* User can tap on signup button to be taken to signup screen
-* If logging in, then check if username and password matches in order to go to the dashboard
-* If signing up, then check that the username and email are not already being used
-* If there's an error in the process, then the user sees the error displayed
-* Fetch user row and rows of associated tables from the server
-* If signing up, then add a new row to the server table for new user
-* Fetch the top 20 books to be displayed in the selection tab by default
+[x] User sees and taps on the app icon to open app
+[x] User sees a styled launch screen while the app launches
+[x] User can tap on login button to be taken to login screen or
+[x] User can tap on signup button to be taken to signup screen
+[x] If logging in, then check if username and password matches in order to go to the dashboard
+[x] If signing up, then check that the username and email are not already being used
+[x] If there's an error in the process, then the user sees the error displayed
+[x] Fetch user row and rows of associated tables from the server
+[x] If signing up, then add a new row to the server table for new user
+[x] Fetch the top 20 books to be displayed in the selection tab by default
 * User's session is opened and saved
 * User sees the collection of books that they are borrowing sorted by name of book
 * User also sees the navigation bar at the bottom of the screen
