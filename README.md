@@ -546,33 +546,33 @@ Open Library
 - [X] If signing up, then add a new row to the server table for new user
 - [X] Fetch the top 20 books to be displayed in the selection tab by default
 - [X] User's session is opened and saved
-[] User sees the collection of books that they are borrowing sorted by name of book
-[] User also sees the navigation bar at the bottom of the screen
-[] User can navigate to the bookmarks screen using the navigation bar to continue reading each book
-[] User can navigate to the selection screen using the navigation bar to see the selection of books
-[] User can navigate to the profile screen using the navigation bar to see the logout button and profile details and settings
-[] User can continue reading the book
-[] User sees the book's cover author, summary, genre, rating, and how many others have read it
-[] User can rate the book
-[] User can favorite the book
-[] User taps on a bookmarked book to continue reading
-[] User reads the book
-[] User turns the pages
-[] User makes a bookmark
-[] User can scroll through the top 20 books that are displayed by default
-[] User can search for a book by genre, title, or author
-[] User can sort the books by rating, popularity, name of author (alphabetically), title of book (alphabetically), or length
-[] User can select a book to go to the book's checkout screen
-[] User sees the book's cover, title, author, summary, rating, and number of time it has been checked out
-[] User taps the checkout button
-[] User can logout
-[] User's session is closed when logging out
-[] User sees their username at the top (to the left of the logout button)
-[] User seen profile picture, a bio, and their favorited books
+- [] User sees the collection of books that they are borrowing sorted by name of book
+- [] User also sees the navigation bar at the bottom of the screen
+- [] User can navigate to the bookmarks screen using the navigation bar to continue reading each book
+- [] User can navigate to the selection screen using the navigation bar to see the selection of books
+- [] User can navigate to the profile screen using the navigation bar to see the logout button and profile details and settings
+- [] User can continue reading the book
+- [] User sees the book's cover author, summary, genre, rating, and how many others have read it
+- [] User can rate the book
+- [] User can favorite the book
+- [] User taps on a bookmarked book to continue reading
+- [] User reads the book
+- [] User turns the pages
+- [] User makes a bookmark
+- [] User can scroll through the top 20 books that are displayed by default
+- [] User can search for a book by genre, title, or author
+- [] User can sort the books by rating, popularity, name of author (alphabetically), title of book (alphabetically), or length
+- [] User can select a book to go to the book's checkout screen
+- [] User sees the book's cover, title, author, summary, rating, and number of time it has been checked out
+- [] User taps the checkout button
+- [] User can logout
+- [] User's session is closed when logging out
+- [] User sees their username at the top (to the left of the logout button)
+- [] User seen profile picture, a bio, and their favorited books
 
 **Optional Nice-to-have Stories**
 
-[] User can add friends
-[] User can share their library
-[] User can direct message friends
-[] Can see and post reviews
+- [] User can add friends
+- [] User can share their library
+- [] User can direct message friends
+- [] Can see and post reviews
