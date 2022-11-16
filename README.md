@@ -555,7 +555,7 @@ Open Library
 - [X] Fetch the top 20 books to be displayed in the selection tab by default
 - [X] User's session is opened and saved
 
-- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26.gif)
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26c.gif)
 
 #### Sprint 2
 
