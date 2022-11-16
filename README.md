@@ -535,6 +535,8 @@ Open Library
 
 **Required Must-have Stories**
 
+#### Sprint 1
+
 - [X] User sees and taps on the app icon to open app
 - [X] User sees a styled launch screen while the app launches
 - [X] User can tap on login button to be taken to login screen or
@@ -545,12 +547,17 @@ Open Library
 
 - [X] If logging in, then check if username and password matches in order to go to the dashboard
 - [X] If there's an error in the process, then the user sees the error displayed
+
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26b.gif)
+
 - [X] Fetch user row and rows of associated tables from the server
 - [X] If signing up, then add a new row to the server table for new user
 - [X] Fetch the top 20 books to be displayed in the selection tab by default
 - [X] User's session is opened and saved
 
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26.gif)
 
+#### Sprint 2
 
 - [ ] User sees the collection of books that they are borrowing sorted by name of book
 - [ ] User also sees the navigation bar at the bottom of the screen
@@ -565,12 +572,18 @@ Open Library
 - [ ] User reads the book
 - [ ] User turns the pages
 - [ ] User makes a bookmark
+
+#### Sprint 3
+
 - [ ] User can scroll through the top 20 books that are displayed by default
 - [ ] User can search for a book by genre, title, or author
 - [ ] User can sort the books by rating, popularity, name of author (alphabetically), title of book (alphabetically), or length
 - [ ] User can select a book to go to the book's checkout screen
 - [ ] User sees the book's cover, title, author, summary, rating, and number of time it has been checked out
 - [ ] User taps the checkout button
+
+#### Sprint 4
+
 - [ ] User can logout
 - [ ] User's session is closed when logging out
 - [ ] User sees their username at the top (to the left of the logout button)
