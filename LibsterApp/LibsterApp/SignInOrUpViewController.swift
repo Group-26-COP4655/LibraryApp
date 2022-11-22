@@ -12,8 +12,20 @@ class SignInOrUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        keepUserLogged()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        if UserDefaults.standard.bool(forKey: "userLoggedIn") == true {
+//            self.performSegue(withIdentifier: "logInToDash", sender: self)
+//        }
+    }
+    
+    
+    func keepUserLogged() {
+//        UserDefaults.standard.set(true, forKey: "userLoggedIn")
     }
     
 

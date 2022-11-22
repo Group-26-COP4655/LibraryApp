@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8B4C687E844398E936E4B4AB /* libPods-LibsterAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39847784D085EC446DC93525 /* libPods-LibsterAppUITests.a */; };
 		BE1F7A212919A16800555ED1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F7A202919A16800555ED1 /* TestViewController.swift */; };
+		BE4115DA2924AB2400EA117E /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4115D92924AB2400EA117E /* DashViewController.swift */; };
+		BE67B56F292D1A1700CD6377 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */; };
+		BE67B571292D226D00CD6377 /* BookGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67B570292D226D00CD6377 /* BookGridCell.swift */; };
 		BEACE22429199E14002171A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE22329199E14002171A6 /* AppDelegate.swift */; };
 		BEACE22629199E14002171A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE22529199E14002171A6 /* SceneDelegate.swift */; };
 		BEACE22B29199E14002171A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEACE22929199E14002171A6 /* Main.storyboard */; };
@@ -18,6 +21,7 @@
 		BEACE24629199E1F002171A6 /* LibsterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE24529199E1F002171A6 /* LibsterAppUITests.swift */; };
 		BEFA24242922FEB20039B780 /* SignInOrUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA24232922FEB20039B780 /* SignInOrUpViewController.swift */; };
 		BEFA24262923060B0039B780 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA24252923060B0039B780 /* SignInViewController.swift */; };
+		BEFA2428292307D10039B780 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA2427292307D10039B780 /* SignUpViewController.swift */; };
 		CBEAE57A2C7C8BF8C5962E62 /* libPods-LibsterAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C5FA0C457794D557C17CDE /* libPods-LibsterAppTests.a */; };
 		FF4D52B71D46034E6CFE853B /* Pods_LibsterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59595E4311B06CC4159FD6F /* Pods_LibsterApp.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +53,9 @@
 		B0C5FA0C457794D557C17CDE /* libPods-LibsterAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LibsterAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59595E4311B06CC4159FD6F /* Pods_LibsterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibsterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1F7A202919A16800555ED1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		BE4115D92924AB2400EA117E /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
+		BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BE67B570292D226D00CD6377 /* BookGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookGridCell.swift; sourceTree = "<group>"; };
 		BEACE22029199E14002171A6 /* LibsterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibsterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEACE22329199E14002171A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEACE22529199E14002171A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +71,7 @@
 		BEACE24729199E1F002171A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEFA24232922FEB20039B780 /* SignInOrUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOrUpViewController.swift; sourceTree = "<group>"; };
 		BEFA24252923060B0039B780 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BEFA2427292307D10039B780 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D6E693B15497F5A19F369253 /* Pods-LibsterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibsterApp.debug.xcconfig"; path = "Target Support Files/Pods-LibsterApp/Pods-LibsterApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +150,10 @@
 				BE1F7A202919A16800555ED1 /* TestViewController.swift */,
 				BEFA24232922FEB20039B780 /* SignInOrUpViewController.swift */,
 				BEFA24252923060B0039B780 /* SignInViewController.swift */,
+				BEFA2427292307D10039B780 /* SignUpViewController.swift */,
+				BE4115D92924AB2400EA117E /* DashViewController.swift */,
+				BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */,
+				BE67B570292D226D00CD6377 /* BookGridCell.swift */,
 			);
 			path = LibsterApp;
 			sourceTree = "<group>";
@@ -395,10 +407,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFA2428292307D10039B780 /* SignUpViewController.swift in Sources */,
+				BE4115DA2924AB2400EA117E /* DashViewController.swift in Sources */,
 				BEACE22429199E14002171A6 /* AppDelegate.swift in Sources */,
 				BE1F7A212919A16800555ED1 /* TestViewController.swift in Sources */,
 				BEFA24242922FEB20039B780 /* SignInOrUpViewController.swift in Sources */,
 				BEFA24262923060B0039B780 /* SignInViewController.swift in Sources */,
+				BE67B56F292D1A1700CD6377 /* ProfileViewController.swift in Sources */,
+				BE67B571292D226D00CD6377 /* BookGridCell.swift in Sources */,
 				BEACE22629199E14002171A6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
