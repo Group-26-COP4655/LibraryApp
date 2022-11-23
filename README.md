@@ -560,21 +560,23 @@ Open Library
 #### Sprint 2
 
 - [ ] User sees the collection of books that they are borrowing sorted by name of book
-- [ ] User also sees the navigation bar at the bottom of the screen
-- [ ] User can navigate to the bookmarks screen using the navigation bar to continue reading each book
-- [ ] User can navigate to the selection screen using the navigation bar to see the selection of books
-- [ ] User can navigate to the profile screen using the navigation bar to see the logout button and profile details and settings
+- [X] User also sees the navigation bar at the bottom of the screen
 - [ ] User can continue reading the book
-- [ ] User sees the book's cover author, summary, genre, rating, and how many others have read it
+- [X] User can tap on a book in their collection to see the details page
+- [X] User sees the book's cover author, summary, genre, rating, and how many others have read it
 - [ ] User can rate the book
 - [ ] User can favorite the book
-- [ ] User taps on a bookmarked book to continue reading
 - [ ] User reads the book
 - [ ] User turns the pages
-- [ ] User makes a bookmark
 
 #### Sprint 3
 
+- [ ] User makes a bookmark
+- [ ] User can navigate to the bookmarks screen using the navigation bar
+- [ ] User sees their bookmarks as a collection of covers
+- [ ] User clicks on a bookmark (book cover) to continue reading
+- [ ] User taps on a bookmark to keep reading
+- [ ] User can navigate to the selection screen using the navigation bar to see the selection of books
 - [ ] User can scroll through the top 20 books that are displayed by default
 - [ ] User can search for a book by genre, title, or author
 - [ ] User can sort the books by rating, popularity, name of author (alphabetically), title of book (alphabetically), or length
@@ -584,6 +586,7 @@ Open Library
 
 #### Sprint 4
 
+- [ ] User can navigate to the profile screen using the navigation bar to see the logout button and profile details and settings
 - [ ] User can logout
 - [ ] User's session is closed when logging out
 - [ ] User sees their username at the top (to the left of the logout button)
