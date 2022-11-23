@@ -561,13 +561,13 @@ Open Library
 
 - [ ] User sees the collection of books that they are borrowing sorted by name of book
 - [X] User also sees the navigation bar at the bottom of the screen
-- [ ] User can continue reading the book
+- [X] User can continue reading the book
 - [X] User can tap on a book in their collection to see the details page
 - [X] User sees the book's cover author, summary, genre, rating, and how many others have read it
 - [ ] User can rate the book
 - [ ] User can favorite the book
-- [ ] User reads the book
-- [ ] User turns the pages
+- [X] User reads the book
+- [X] User turns the pages
 
 #### Sprint 3
 
