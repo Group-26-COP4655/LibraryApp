@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B4C687E844398E936E4B4AB /* libPods-LibsterAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39847784D085EC446DC93525 /* libPods-LibsterAppUITests.a */; };
+		BE1A7BB0292D48C100502047 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A7BAF292D48C100502047 /* BookDetailsViewController.swift */; };
+		BE1A7BB2292D608800502047 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A7BB1292D608700502047 /* ReadViewController.swift */; };
 		BE1F7A212919A16800555ED1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F7A202919A16800555ED1 /* TestViewController.swift */; };
 		BE4115DA2924AB2400EA117E /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4115D92924AB2400EA117E /* DashViewController.swift */; };
 		BE67B56F292D1A1700CD6377 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */; };
@@ -52,6 +54,8 @@
 		83E251FD8D1489A6AD97B7A1 /* Pods-LibsterAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibsterAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-LibsterAppUITests/Pods-LibsterAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0C5FA0C457794D557C17CDE /* libPods-LibsterAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LibsterAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59595E4311B06CC4159FD6F /* Pods_LibsterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibsterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1A7BAF292D48C100502047 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
+		BE1A7BB1292D608700502047 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		BE1F7A202919A16800555ED1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BE4115D92924AB2400EA117E /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
 		BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				BE4115D92924AB2400EA117E /* DashViewController.swift */,
 				BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */,
 				BE67B570292D226D00CD6377 /* BookGridCell.swift */,
+				BE1A7BAF292D48C100502047 /* BookDetailsViewController.swift */,
+				BE1A7BB1292D608700502047 /* ReadViewController.swift */,
 			);
 			path = LibsterApp;
 			sourceTree = "<group>";
@@ -409,6 +415,8 @@
 			files = (
 				BEFA2428292307D10039B780 /* SignUpViewController.swift in Sources */,
 				BE4115DA2924AB2400EA117E /* DashViewController.swift in Sources */,
+				BE1A7BB0292D48C100502047 /* BookDetailsViewController.swift in Sources */,
+				BE1A7BB2292D608800502047 /* ReadViewController.swift in Sources */,
 				BEACE22429199E14002171A6 /* AppDelegate.swift in Sources */,
 				BE1F7A212919A16800555ED1 /* TestViewController.swift in Sources */,
 				BEFA24242922FEB20039B780 /* SignInOrUpViewController.swift in Sources */,
