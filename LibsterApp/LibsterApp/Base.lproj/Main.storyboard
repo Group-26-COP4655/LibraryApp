@@ -462,7 +462,7 @@
             </objects>
             <point key="canvasLocation" x="-493" y="2433"/>
         </scene>
-        <!--View Controller-->
+        <!--Bookmarks-->
         <scene sceneID="kqT-vb-zna">
             <objects>
                 <viewController id="RsI-3g-6ra" sceneMemberID="viewController">
@@ -472,23 +472,33 @@
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bVd-Zr-t4u"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BHs-l9-5ci"/>
+                    <navigationItem key="navigationItem" title="Bookmarks" id="BHs-l9-5ci"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ba-uZ-JJy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-494" y="3240"/>
         </scene>
-        <!--View Controller-->
+        <!--Search-->
         <scene sceneID="t7p-59-mdW">
             <objects>
-                <viewController id="ewr-NN-mla" sceneMemberID="viewController">
+                <viewController id="ewr-NN-mla" customClass="SearchViewController" customModule="LibsterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bN0-F3-McH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search Books, Genres, Authors ..." translatesAutoresizingMaskIntoConstraints="NO" id="Tf3-68-w8c">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="W8d-3t-5Gb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Wp-LM-iSH"/>
+                    <navigationItem key="navigationItem" title="Search" id="2Wp-LM-iSH"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Tf3-68-w8c" id="eBS-HT-3rR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgZ-od-lTh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

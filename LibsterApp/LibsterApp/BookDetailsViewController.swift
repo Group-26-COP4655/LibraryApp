@@ -12,8 +12,7 @@ import Parse
 
 class BookDetailsViewController: UIViewController {
     
-    var rating = 0;
-    var favorited:Bool = false
+    var rating = 0
     var book = NSDictionary()
     
     @IBOutlet weak var coverImage: UIImageView!
@@ -35,6 +34,7 @@ class BookDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        isFavorited()
         
         let ratingStr = book["rating"] as? String
         let ratingText = ratingStr! + "/5"
@@ -50,26 +50,55 @@ class BookDetailsViewController: UIViewController {
         ratingLabel.text = ratingText
         readersLabel.text = readersText
         coverImage.af.setImage(withURL: image!)
+        
+        
+//        print("value of favorited inside of viewDidLoad")
+//        print(self.favorited)
     }
     
-    
-//    func isFavorite() -> Bool {
+//    func loadFavorites() {
+//        let tempUserObj = PFUser.current()!
+//        let tempObjID = tempUserObj.objectId!
 //
-//        let tempUserObj = PFUser.current() as! PFUser
-//        let favorites = tempUserObj["favorites"] as! [NSDictionary]
+//        let query = PFQuery(className:"_User")
+//        query.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
+//             if let error = error {
+//                print(error.localizedDescription)
+//             } else if let userFields = userFields {
+//                self.sessionFavorites = userFields["favorites"] as! [NSDictionary]
+//                let sessionFavorites = userFields["favorites"] as! [NSDictionary]
 //
-//        print(favorites)
-//
-//        for fav in favorites {
-//            print(fav["title"])
+//            }
 //        }
-//        return false
 //    }
     
     
+    func isFavorited() {
+        let tempUserObj = PFUser.current()!
+        let tempObjID = tempUserObj.objectId!
+        let query = PFQuery(className:"_User")
+
+        query.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
+             if let error = error {
+                print(error.localizedDescription)
+             } else if let userFields = userFields {
+                var favorited: Bool = false
+                let sessionFavorites = userFields["favorites"] as! [NSDictionary]
+                let favoriteIndex = self.findBook(sessionFavorites)
+                
+
+                if (favoriteIndex != -1) {
+                    favorited = true
+                }
+                
+                self.setFavorite(favorited)
+            }
+        }
+    }
+    
+    
     func setFavorite(_ isFavorited:Bool){
-        favorited = isFavorited
-        if(favorited){
+        if(isFavorited){
             favButton.setImage(UIImage(named:"fav_red"), for: UIControl.State.normal)
         }else{
             favButton.setImage(UIImage(named:"fav_white"), for: UIControl.State.normal)
@@ -77,6 +106,39 @@ class BookDetailsViewController: UIViewController {
     }
     
     
+    func deleteFavorite(_ tempSessionFavorites: [NSDictionary]) -> [NSDictionary] {
+        if (tempSessionFavorites != []) {
+            let replaceIndex = self.findBook(tempSessionFavorites)
+            let lastIndex = tempSessionFavorites.count - 1
+            var sessionFavoritesMutator = tempSessionFavorites
+
+            sessionFavoritesMutator[replaceIndex] = sessionFavoritesMutator[lastIndex]
+            sessionFavoritesMutator.popLast()
+            return sessionFavoritesMutator
+        }
+        else {
+            return []
+        }
+    }
+    
+    
+    func findBook(_ tempSessionFavorites: [NSDictionary]) -> Int {
+        if (tempSessionFavorites != []){
+            var index = 0
+            let deleteID = self.book["bookID"] as! String
+            for tempBook in tempSessionFavorites {
+                let tempBookID = tempBook["bookID"] as! String
+
+                if (deleteID == tempBookID) {
+                    return index
+                }
+                else {
+                    index = index + 1
+                }
+            }
+        }
+        return -1
+    }
     
     
     @IBAction func readButton(_ sender: Any) {
@@ -90,40 +152,38 @@ class BookDetailsViewController: UIViewController {
     @IBAction func favoriteButton(_ sender: Any) {
         let tempUserObj = PFUser.current()!
         let tempObjID = tempUserObj.objectId!
-         
-        if(!favorited){
-             let query = PFQuery(className:"_User")
-             query.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
-                 if let error = error {
-                    print(error.localizedDescription)
-                 } else if let userFields = userFields {
-                    var currentFavorites = userFields["favorites"] as! [NSDictionary]
-                    currentFavorites.append(self.book)
-                    userFields["favorites"] = currentFavorites
-                    userFields.saveInBackground()
-                    print("Book has successfully been added to favorites!")
-                     self.setFavorite(true)
-                     self.favorited = true
+        let query = PFQuery(className:"_User")
+        
+        query.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
+             if let error = error {
+                print(error.localizedDescription)
+             } else if let userFields = userFields {
+                var favorited: Bool = false
+                var sessionFavorites = userFields["favorites"] as! [NSDictionary]
+                let favoriteIndex = self.findBook(sessionFavorites)
+                
+                if (favoriteIndex != -1) {
+                    favorited = true
                 }
-             }
-         }
-        else{
-             let query = PFQuery(className:"_User")
-             query.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
-                 if let error = error {
-                    print(error.localizedDescription)
-                 } else if let userFields = userFields {
-                    var currentFavorites = userFields["favorites"] as! [NSDictionary]
-
-                    
-                    
-                    userFields.saveInBackground()
-                     print("Book has successfully been removed from favorites!")
-                     self.setFavorite(false)
-                     self.favorited = false
+                
+                if(!favorited) {
+                   sessionFavorites.append(self.book)
+                   userFields["favorites"] = sessionFavorites
+                   userFields.saveInBackground()
+                   print(sessionFavorites)
+                   print("Book has successfully been added to favorites!")
+                   self.setFavorite(!favorited)
                 }
-             }
-         }
+                else {
+                    sessionFavorites = self.deleteFavorite(sessionFavorites)
+                    userFields["favorites"] = sessionFavorites
+                    userFields.saveInBackground()
+                    print(sessionFavorites)
+                    print("Book has successfully been removed from favorites!")
+                    self.setFavorite(!favorited)
+                }
+            }
+        }
     }
     
     
@@ -192,12 +252,16 @@ class BookDetailsViewController: UIViewController {
             rateFiveOutlet.setImage(UIImage(named:"rate_gold"), for: UIControl.State.normal)
         }
         
+        
+//        let oldRatingStr = book["rating"] as! String
+//        let oldRatingFloat = Float(oldRatingStr)
+//        let oldRating = oldRatingFloat as! Float
+//        
+//        var updatedRating = 
+        
         let ratingText = String(toRate) + ".0/5"
         ratingLabel.text = ratingText
     }
-    
-    
-    
     
     
     // MARK: - Navigation

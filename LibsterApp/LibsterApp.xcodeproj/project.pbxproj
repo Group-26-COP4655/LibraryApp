@@ -21,6 +21,7 @@
 		BEACE23029199E1E002171A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEACE22E29199E1E002171A6 /* LaunchScreen.storyboard */; };
 		BEACE23B29199E1F002171A6 /* LibsterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE23A29199E1F002171A6 /* LibsterAppTests.swift */; };
 		BEACE24629199E1F002171A6 /* LibsterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE24529199E1F002171A6 /* LibsterAppUITests.swift */; };
+		BEC06CDA2935749E00DB95EE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC06CD92935749E00DB95EE /* SearchViewController.swift */; };
 		BEFA24242922FEB20039B780 /* SignInOrUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA24232922FEB20039B780 /* SignInOrUpViewController.swift */; };
 		BEFA24262923060B0039B780 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA24252923060B0039B780 /* SignInViewController.swift */; };
 		BEFA2428292307D10039B780 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA2427292307D10039B780 /* SignUpViewController.swift */; };
@@ -73,6 +74,7 @@
 		BEACE24129199E1F002171A6 /* LibsterAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibsterAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEACE24529199E1F002171A6 /* LibsterAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibsterAppUITests.swift; sourceTree = "<group>"; };
 		BEACE24729199E1F002171A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC06CD92935749E00DB95EE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BEFA24232922FEB20039B780 /* SignInOrUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOrUpViewController.swift; sourceTree = "<group>"; };
 		BEFA24252923060B0039B780 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BEFA2427292307D10039B780 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				BE67B570292D226D00CD6377 /* BookGridCell.swift */,
 				BE1A7BAF292D48C100502047 /* BookDetailsViewController.swift */,
 				BE1A7BB1292D608700502047 /* ReadViewController.swift */,
+				BEC06CD92935749E00DB95EE /* SearchViewController.swift */,
 			);
 			path = LibsterApp;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				BE1A7BB2292D608800502047 /* ReadViewController.swift in Sources */,
 				BEACE22429199E14002171A6 /* AppDelegate.swift in Sources */,
 				BE1F7A212919A16800555ED1 /* TestViewController.swift in Sources */,
+				BEC06CDA2935749E00DB95EE /* SearchViewController.swift in Sources */,
 				BEFA24242922FEB20039B780 /* SignInOrUpViewController.swift in Sources */,
 				BEFA24262923060B0039B780 /* SignInViewController.swift in Sources */,
 				BE67B56F292D1A1700CD6377 /* ProfileViewController.swift in Sources */,

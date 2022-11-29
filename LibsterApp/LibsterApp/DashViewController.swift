@@ -38,10 +38,9 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
         let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
         layout.itemSize = CGSize(width: width, height: width * 1.5)
         
-        testfunc()
-        // Do any additional setup after loading the view.
-        
-        sortBooks()
+//        testfunc()
+//        
+//        sortBooks()
 
     }
     
@@ -131,10 +130,44 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
         
     
  
-  func testfunc() {
-    
-    
-    
+//  func testfunc() {
+//    
+//    
+//        let appMetadata = PFObject(className:"AppMetadata")
+//        appMetadata["bookCount"] = 0
+//        appMetadata.saveInBackground { (succeeded, error)  in
+//            if (succeeded) {
+//                // The object has been saved.
+//            } else {
+//                // There was a problem, check error.description
+//            }
+//        }
+        
+        
+        
+    //    let bookMetadata = PFObject(className:"Book Metadata")
+    //    bookMetadata["bookID"] = ["000000000"]
+    //    bookMetadata["title"] = ["Six of Crows"]
+    //    bookMetadata["author"] = ["Sarah J. Maas"]
+    //    bookMetadata["cover"] = ["https://covers.openlibrary.org/b/id/12667423-L.jpg"]
+    //    bookMetadata["isbn13"] = ["9781619634442"]
+    //    bookMetadata["genre"] = ["Fantasy"]
+    //    bookMetadata["summary"] = ["lorem ipsem"]
+    //    bookMetadata["published"] = ["May 05, 2015"]
+    //    bookMetadata["rating"] = ["5.0"]
+    //    bookMetadata["readers"] = ["0"]
+    //    bookMetadata["book"] = ["link"]
+    //    bookMetadata["bookmark"] = ["n/a"]
+    //    bookMetadata ["raters"] = 0
+    //    bookMetadata["rating"] = 0
+    //    bookMetadata["readers"] = 0
+    //    bookMetadata.saveInBackground { (succeeded, error)  in
+    //        if (succeeded) {
+    //            // The object has been saved.
+    //        } else {
+    //            // There was a problem, check error.description
+    //        }
+        }
     
     
 //    let url = URL(string: "https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&jscmd=details&format=json")
@@ -281,18 +314,14 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
 //        }
 //    }
 //      self.Top20.text = "Top20: none yet"
-  }
+  
 
         
 
     
     
     
-    
-    
-    
-    
-    
+
     
     
     
