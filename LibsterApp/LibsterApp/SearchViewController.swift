@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
 
@@ -32,5 +33,30 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+            self.searchBar.showsCancelButton = true
+    }
+    
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.showsCancelButton = false
+            searchBar.text = ""
+            searchBar.resignFirstResponder()
+    }
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchText = searchBar.text as! String
+        let apiStr = "http://openlibrary.org/search.json?title="
+        let apiCallStr = apiStr + searchText
+        
+//        AF.request(apiCallStr).responseJSON {
+//            response in print(response)
+//        }
+        print(apiCallStr)
+    }
+    
 
 }
