@@ -578,18 +578,18 @@ Open Library
 - [ ] User sees their bookmarks as a collection of covers
 - [ ] User clicks on a bookmark (book cover) to continue reading
 - [ ] User can navigate to the selection screen using the navigation bar to see the selection of books
-- [ ] User can scroll through the top 20 books that are displayed by default
-- [ ] User can search for a book by title
+- [ ] User can navigate to the profile screen using the navigation bar and sees the logout button
+- [ ] User can logout
 
 
 #### Sprint 4
 
-- [ ] User can sort the books by rating, popularity, name of author (alphabetically), title of book (alphabetically), or length
+- [ ] User can scroll through the top 20 books that are displayed by default
+- [ ] User can search for a book by title
+- [ ] User can sort the books by rating or readers
 - [ ] User can select a book to go to the book's checkout screen
 - [ ] User sees the book's cover, title, author, summary, rating, and number of time it has been checked out
 - [ ] User taps the checkout button
-- [ ] User can navigate to the profile screen using the navigation bar to see the logout button and profile details and settings
-- [ ] User can logout
 - [ ] User's session is closed when logging out
 - [ ] User sees their username at the top (to the left of the logout button)
 - [ ] User seen profile picture, a bio, and their favorited books
