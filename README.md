@@ -574,7 +574,7 @@ Open Library
 #### Sprint 3
 
 - [ ] User makes a bookmark
-- [ ] User can navigate to the bookmarks screen using the navigation bar
+- [X] User can navigate to the bookmarks screen using the navigation bar
 - [ ] User sees their bookmarks as a collection of covers
 - [ ] User clicks on a bookmark (book cover) to continue reading
 - [ ] User can navigate to the selection screen using the navigation bar to see the selection of books
