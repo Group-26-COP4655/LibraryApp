@@ -578,15 +578,15 @@ Open Library
 - [X] User can navigate to the profile screen using the navigation bar and sees the logout button
 - [X] User can logout
 - [X] User's session is terminated on logout
+- [X] User can see some of the default popular books that are displayed on the search page
 
-- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26d.gif))
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26e.gif)
 
 #### Sprint 4
 
 - [ ] User clicks on a bookmark (book cover) to continue reading
 - [ ] User sees their bookmarks as a collection of covers
 - [ ] User makes a bookmark
-- [ ] User can scroll through the top 20 books that are displayed by default
 - [ ] User can search for a book by title
 - [ ] User can sort the books by rating or readers
 - [ ] User can select a book to go to the book's checkout screen
