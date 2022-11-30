@@ -573,17 +573,18 @@ Open Library
 
 #### Sprint 3
 
-- [ ] User makes a bookmark
 - [X] User can navigate to the bookmarks screen using the navigation bar
-- [ ] User sees their bookmarks as a collection of covers
-- [ ] User clicks on a bookmark (book cover) to continue reading
-- [ ] User can navigate to the selection screen using the navigation bar to see the selection of books
-- [ ] User can navigate to the profile screen using the navigation bar and sees the logout button
-- [ ] User can logout
+- [X] User can navigate to the selection screen using the navigation bar to see the selection of books
+- [X] User can navigate to the profile screen using the navigation bar and sees the logout button
+- [X] User can logout
 
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26d.gif))
 
 #### Sprint 4
 
+- [ ] User clicks on a bookmark (book cover) to continue reading
+- [ ] User sees their bookmarks as a collection of covers
+- [ ] User makes a bookmark
 - [ ] User can scroll through the top 20 books that are displayed by default
 - [ ] User can search for a book by title
 - [ ] User can sort the books by rating or readers
