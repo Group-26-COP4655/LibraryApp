@@ -577,10 +577,9 @@ Open Library
 - [ ] User can navigate to the bookmarks screen using the navigation bar
 - [ ] User sees their bookmarks as a collection of covers
 - [ ] User clicks on a bookmark (book cover) to continue reading
-- [ ] User taps on a bookmark to keep reading
 - [ ] User can navigate to the selection screen using the navigation bar to see the selection of books
 - [ ] User can scroll through the top 20 books that are displayed by default
-- [ ] User can search for a book by genre, title, or author
+- [ ] User can search for a book by title
 
 
 #### Sprint 4
