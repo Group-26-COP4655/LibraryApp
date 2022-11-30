@@ -577,6 +577,7 @@ Open Library
 - [X] User can navigate to the selection screen using the navigation bar to see the selection of books
 - [X] User can navigate to the profile screen using the navigation bar and sees the logout button
 - [X] User can logout
+- [X] User's session is terminated on logout
 
 - ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26d.gif))
 
