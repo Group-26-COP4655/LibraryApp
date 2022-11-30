@@ -88,7 +88,7 @@ class BookmarksViewController: UIViewController, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let bookmarks = userObj["bookmarks"] as! [NSDictionary]
-        
+        print(bookmarks.count)
         return bookmarks.count
     }
 
