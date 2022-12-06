@@ -16,7 +16,6 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     let userObj = PFUser.current()!
-    
     var books = [[String: Any]]()
     
     @IBOutlet weak var libCollectionView: UICollectionView!
@@ -27,8 +26,6 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         libCollectionView.delegate = self
         libCollectionView.dataSource = self
-        
-        self.libCollectionView.reloadData()
         
         let layout = libCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
@@ -42,6 +39,23 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
 //        
 //        sortBooks()
 
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        let tempObjID = userObj.objectId!
+//        let queryTwo = PFQuery(className:"_User")
+//
+//        queryTwo.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
+//             if let error = error {
+//                print(error.localizedDescription)
+//             } else if let userFields = userFields {
+//                self.books = userFields["borrowedBooks"] as! [[String:Any]]
+//                self.libCollectionView.reloadData()
+//             }
+//        }
     }
     
     
@@ -101,36 +115,11 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     
-    
-    
-    
-    
-//    func testParse2() {
-//        let
-//        User.username = "test_username"
-//        User.password = "test_password"
-//        User.email = "test_email@test.com"
-//        User["userId"] = "A0000"
-//        User["profilePicture"] = "url"
-//        User["bio"] = "lorem ipsem"
-//        User["borrowedBooks"] = []
-//        User["bookmarkds"] = []
-//        User["favorites"] = []
-//        User["friends"] = []
-//
-//        User.signUpInBackground { (Success, Error) in
-//            if (Success) {
-//
-//            }
-//            else {
-//                print("Error!")
-//                print(Error)
-//            }
-//        }
+  
         
     
  
-//  func testfunc() {
+  func testfunc() {
 //    
 //    
 //        let appMetadata = PFObject(className:"AppMetadata")
@@ -145,28 +134,22 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         
         
-    //    let bookMetadata = PFObject(className:"Book Metadata")
-    //    bookMetadata["bookID"] = ["000000000"]
-    //    bookMetadata["title"] = ["Six of Crows"]
-    //    bookMetadata["author"] = ["Sarah J. Maas"]
-    //    bookMetadata["cover"] = ["https://covers.openlibrary.org/b/id/12667423-L.jpg"]
-    //    bookMetadata["isbn13"] = ["9781619634442"]
-    //    bookMetadata["genre"] = ["Fantasy"]
-    //    bookMetadata["summary"] = ["lorem ipsem"]
-    //    bookMetadata["published"] = ["May 05, 2015"]
-    //    bookMetadata["rating"] = ["5.0"]
-    //    bookMetadata["readers"] = ["0"]
-    //    bookMetadata["book"] = ["link"]
-    //    bookMetadata["bookmark"] = ["n/a"]
-    //    bookMetadata ["raters"] = 0
-    //    bookMetadata["rating"] = 0
-    //    bookMetadata["readers"] = 0
-    //    bookMetadata.saveInBackground { (succeeded, error)  in
-    //        if (succeeded) {
-    //            // The object has been saved.
-    //        } else {
-    //            // There was a problem, check error.description
-    //        }
+//        let bookMetadata = PFObject(className:"BookMetadata")
+//        bookMetadata["bookID"] = "000000000"
+//        bookMetadata["isbn"] = "N/A"
+//        bookMetadata["rating"] = "0.0"
+//        bookMetadata["readers"] = "0"
+//        bookMetadata ["raters"] = "0"
+//        bookMetadata["cumulativeRating"] = "0"
+//        bookMetadata["rating"] = "0"
+//        bookMetadata["readers"] = "0"
+//        bookMetadata["get"] = "allbooks"
+//        bookMetadata.saveInBackground { (succeeded, error)  in
+//            if (succeeded) {
+//                // The object has been saved.
+//            } else {
+//                // There was a problem, check error.description
+//            }
 //        }
     
     
@@ -346,7 +329,7 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
 //
 //            } catch {
 //
-//        }
+        }
     
     
     
@@ -466,15 +449,17 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let borrowedBooks = userObj["borrowedBooks"] as! [NSDictionary]
+        
+        let borrowedBooks = books
         
         return borrowedBooks.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = libCollectionView.dequeueReusableCell(withReuseIdentifier: "BookGridCell", for: indexPath) as! BookGridCell
-        let borrowedBooks = userObj["borrowedBooks"] as! [NSDictionary]
-//        let borrowedBooks = sortBooks()
+        let borrowedBooks = books
+//          let borrowedBooks = sortBooks()
         let book = borrowedBooks[indexPath.item]
         let coverUrl = book["cover"] as! String
         let image = URL(string: coverUrl)
@@ -506,9 +491,10 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let cell = sender as! UICollectionViewCell
         let indexPath = libCollectionView.indexPath(for: cell)!
-        let borrowedBooks = userObj["borrowedBooks"] as! [NSDictionary]
+        let borrowedBooks = books as [NSDictionary]
         let book = borrowedBooks[indexPath.item]
         let detailsViewController = segue.destination as! BookDetailsViewController
         detailsViewController.book = book

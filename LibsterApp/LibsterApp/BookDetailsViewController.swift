@@ -36,24 +36,52 @@ class BookDetailsViewController: UIViewController {
         
         isFavorited()
         
-        let ratingStr = book["rating"] as? String
-        let ratingText = ratingStr! + "/5"
-        let readersStr = book["readers"] as? String
-        let readersText = readersStr! + " Readers"
         let coverUrl = book["cover"] as! String
         let image = URL(string: coverUrl)
+        let isbn = book["isbn"] as! String
+        let query = PFQuery(className:"BookMetadata")
+
+        query.whereKey("isbn", equalTo:isbn)
+        do {
+            let foundBooks:[PFObject] = try query.findObjects()
+            
+            if (foundBooks.count != 0) {
+                
+                let foundBook = foundBooks[0]
+                let ratingStr = foundBook["rating"] as! String
+                let ratingText = ratingStr + "/5"
+                let readersStr = foundBook["readers"] as! String
+                let readersText = readersStr + " Readers"
+                
+                ratingLabel.text = ratingText
+                readersLabel.text = readersText
+            }
+        } catch {
+            print("Error fetching book from server")
+            print(error)
+        }
         
         titleLabel.text = book["title"] as? String
         authorLabel.text = book["author"] as? String
         summaryLabel.text = book["summary"] as? String
         genreLabel.text = book["genre"] as? String
-        ratingLabel.text = ratingText
-        readersLabel.text = readersText
         coverImage.af.setImage(withURL: image!)
         
-        
-//        print("value of favorited inside of viewDidLoad")
-//        print(self.favorited)
+        let tempUserObjThree = PFUser.current()!
+        let tempObjIDThree = tempUserObjThree.objectId!
+        let queryThree = PFQuery(className:"_User")
+       
+        queryThree.getObjectInBackground(withId: tempObjIDThree) { (userFields: PFObject?, error: Error?) in
+            if let error = error {
+               print(error.localizedDescription)
+            } else if let userFields = userFields {
+                let temprBorrowedBooks = userFields["borrowedBooks"] as! [NSDictionary]
+                let temprCurrentBookIndex = self.findBook(temprBorrowedBooks)
+                let temprCurrentBook = temprBorrowedBooks[temprCurrentBookIndex]
+                let userRating = Int(temprCurrentBook["userRating"] as! String)
+                self.setRating(userRating!)
+           }
+        }
     }
     
 //    func loadFavorites() {
@@ -85,7 +113,6 @@ class BookDetailsViewController: UIViewController {
                 var favorited: Bool = false
                 let sessionFavorites = userFields["favorites"] as! [NSDictionary]
                 let favoriteIndex = self.findBook(sessionFavorites)
-                
 
                 if (favoriteIndex != -1) {
                     favorited = true
@@ -170,20 +197,47 @@ class BookDetailsViewController: UIViewController {
                    sessionFavorites.append(self.book)
                    userFields["favorites"] = sessionFavorites
                    userFields.saveInBackground()
-                   print(sessionFavorites)
-                   print("Book has successfully been added to favorites!")
+//                   print(sessionFavorites)
+//                   print("Book has successfully been added to favorites!")
                    self.setFavorite(!favorited)
                 }
                 else {
                     sessionFavorites = self.deleteFavorite(sessionFavorites)
                     userFields["favorites"] = sessionFavorites
                     userFields.saveInBackground()
-                    print(sessionFavorites)
-                    print("Book has successfully been removed from favorites!")
+//                    print(sessionFavorites)
+//                    print("Book has successfully been removed from favorites!")
                     self.setFavorite(!favorited)
                 }
             }
         }
+    }
+    
+    
+    @IBAction func returnButton(_ sender: Any) {
+        
+        let tempUserObjFour = PFUser.current()!
+        let tempObjIDFour = tempUserObjFour.objectId!
+        let queryFour = PFQuery(className:"_User")
+        
+        queryFour.getObjectInBackground(withId: tempObjIDFour) { (userFields: PFObject?, error: Error?) in
+             if let error = error {
+                print(error.localizedDescription)
+             } else if let userFields = userFields {
+                var temprSessionBooks = userFields["borrowedBooks"] as! [NSDictionary]
+                
+                temprSessionBooks = self.deleteFavorite(temprSessionBooks)
+                userFields["borrowedBooks"] = temprSessionBooks
+                userFields.saveInBackground()
+            }
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -253,14 +307,65 @@ class BookDetailsViewController: UIViewController {
         }
         
         
+        let query = PFQuery(className:"BookMetadata")
+
+        query.whereKey("bookID", equalTo:(book["bookID"] as? String)!)
+        do {
+            let matchingBooks:[PFObject] = try query.findObjects()
+            let matchingBook = matchingBooks[0]
+            let tempObjID = matchingBook.objectId!
+            let query = PFQuery(className:"BookMetadata")
+            
+            query.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
+                 if let error = error {
+                    print(error.localizedDescription)
+                 } else if let userFields = userFields {
+                    
+                    var cumulativeRating:Int = Int(userFields["cumulativeRating"] as! String)!
+                    var raters:Int = Int(userFields["raters"] as! String)!
+                    var newRating:Double = 0.0
+
+                    cumulativeRating = cumulativeRating + toRate
+                    raters = raters + 1
+                    newRating = round(Double((cumulativeRating / raters) * 10)) / 10
+                    
+                    userFields["cumulativeRating"] = String(cumulativeRating)
+                    userFields["raters"] = String(raters)
+                    userFields["rating"] = String(newRating)
+                    userFields.saveInBackground()
+
+                    let ratingText = String(newRating) + "/5"
+                    self.ratingLabel.text = ratingText
+                    
+                    let tempUserObjTwo = PFUser.current()!
+                    let tempObjIDTwo = tempUserObjTwo.objectId!
+                    let queryTwo = PFQuery(className:"_User")
+                    
+                    queryTwo.getObjectInBackground(withId: tempObjIDTwo) { (userFields: PFObject?, error: Error?) in
+                         if let error = error {
+                            print(error.localizedDescription)
+                         } else if let userFields = userFields {
+                           userFields["userRating"] = toRate
+                           userFields.saveInBackground()
+                        }
+                    }
+                }
+            }
+        } catch {
+            print("Error rating book")
+            print(error)
+        }
+        
+        
+        
+        
+        
+        
 //        let oldRatingStr = book["rating"] as! String
 //        let oldRatingFloat = Float(oldRatingStr)
 //        let oldRating = oldRatingFloat as! Float
-//        
-//        var updatedRating = 
-        
-        let ratingText = String(toRate) + ".0/5"
-        ratingLabel.text = ratingText
+//
+//        var updatedRating =
     }
     
     
@@ -269,9 +374,8 @@ class BookDetailsViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is ReadViewController {
-        let readViewController = segue.destination as? ReadViewController
-            readViewController?.readUrl = book["book"] as! String
+            let readViewController = segue.destination as? ReadViewController
+            readViewController?.book = book as! [String:Any]
         }
     }
-
 }

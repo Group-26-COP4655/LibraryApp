@@ -13,19 +13,13 @@ class SignInViewController: UIViewController {
     
     
     @IBOutlet weak var usernameField: UITextField!
-    
-    
     @IBOutlet weak var passwordField: UITextField!
-    
-    
-    
     @IBOutlet weak var errorLabel: UILabel!
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        passwordField.isSecureTextEntry = true
         // Do any additional setup after loading the view.
     }
     
@@ -49,6 +43,11 @@ class SignInViewController: UIViewController {
                 self.errorLabel.text = errorMessage
             }
         }
+    }
+    
+    
+    @IBAction func cancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     

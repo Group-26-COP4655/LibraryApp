@@ -20,12 +20,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        let tempObj = PFUser.current()
         if (PFUser.current() != nil) {
-            let main = UIStoryboard(name: "Main", bundle: nil)
-            
-            let dashboardController = main.instantiateViewController(withIdentifier: "DashBoardController")
-            
-            window?.rootViewController = dashboardController
+            let tempObjID = (tempObj?.objectId)!
+            let query = PFQuery(className:"_User")
+            query.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
+                 if let error = error {
+                    print(error.localizedDescription)
+                 } else if let userFields = userFields {
+                    if (PFUser.current() != nil) {
+                        let main = UIStoryboard(name: "Main", bundle: nil)
+                        
+                        let dashboardController = main.instantiateViewController(withIdentifier: "DashBoardController")
+                        
+                        self.window?.rootViewController = dashboardController
+                    }
+                 }
+            }
         }
     }
 

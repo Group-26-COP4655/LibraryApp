@@ -11,6 +11,7 @@
 		BE1A7BB0292D48C100502047 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A7BAF292D48C100502047 /* BookDetailsViewController.swift */; };
 		BE1A7BB2292D608800502047 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A7BB1292D608700502047 /* ReadViewController.swift */; };
 		BE1F7A212919A16800555ED1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F7A202919A16800555ED1 /* TestViewController.swift */; };
+		BE238687293EBA1F005EB536 /* ConfirmDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE238686293EBA1F005EB536 /* ConfirmDeleteViewController.swift */; };
 		BE4115DA2924AB2400EA117E /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4115D92924AB2400EA117E /* DashViewController.swift */; };
 		BE67B56F292D1A1700CD6377 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */; };
 		BE67B571292D226D00CD6377 /* BookGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67B570292D226D00CD6377 /* BookGridCell.swift */; };
@@ -22,6 +23,15 @@
 		BEACE23B29199E1F002171A6 /* LibsterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE23A29199E1F002171A6 /* LibsterAppTests.swift */; };
 		BEACE24629199E1F002171A6 /* LibsterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE24529199E1F002171A6 /* LibsterAppUITests.swift */; };
 		BEC06CDA2935749E00DB95EE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC06CD92935749E00DB95EE /* SearchViewController.swift */; };
+		BEF0BDA1293D306600A2F5F3 /* FavoritesGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0BDA0293D306600A2F5F3 /* FavoritesGridCell.swift */; };
+		BEF0BDA5293D6FA700A2F5F3 /* BookmarkGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0BDA4293D6FA700A2F5F3 /* BookmarkGridCell.swift */; };
+		BEF0BDA7293D708300A2F5F3 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0BDA6293D708300A2F5F3 /* BookmarkViewController.swift */; };
+		BEF0BDA9293D766F00A2F5F3 /* ReadBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0BDA8293D766F00A2F5F3 /* ReadBookmarkViewController.swift */; };
+		BEF0BDAB293D78D800A2F5F3 /* OpenedBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0BDAA293D78D800A2F5F3 /* OpenedBookmarkViewController.swift */; };
+		BEF1746E2936E86F0095339A /* SearchGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF1746D2936E86F0095339A /* SearchGridCell.swift */; };
+		BEF174702937F1EA0095339A /* SearchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF1746F2937F1EA0095339A /* SearchDetailsViewController.swift */; };
+		BEF20AC5293AA76A00942D96 /* SearchDetailsGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF20AC4293AA76A00942D96 /* SearchDetailsGridCell.swift */; };
+		BEF20AC7293AADC000942D96 /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF20AC6293AADC000942D96 /* BorrowViewController.swift */; };
 		BEFA24242922FEB20039B780 /* SignInOrUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA24232922FEB20039B780 /* SignInOrUpViewController.swift */; };
 		BEFA24262923060B0039B780 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA24252923060B0039B780 /* SignInViewController.swift */; };
 		BEFA2428292307D10039B780 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA2427292307D10039B780 /* SignUpViewController.swift */; };
@@ -58,6 +68,7 @@
 		BE1A7BAF292D48C100502047 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		BE1A7BB1292D608700502047 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		BE1F7A202919A16800555ED1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		BE238686293EBA1F005EB536 /* ConfirmDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeleteViewController.swift; sourceTree = "<group>"; };
 		BE4115D92924AB2400EA117E /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
 		BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BE67B570292D226D00CD6377 /* BookGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookGridCell.swift; sourceTree = "<group>"; };
@@ -75,6 +86,15 @@
 		BEACE24529199E1F002171A6 /* LibsterAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibsterAppUITests.swift; sourceTree = "<group>"; };
 		BEACE24729199E1F002171A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC06CD92935749E00DB95EE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BEF0BDA0293D306600A2F5F3 /* FavoritesGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesGridCell.swift; sourceTree = "<group>"; };
+		BEF0BDA4293D6FA700A2F5F3 /* BookmarkGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkGridCell.swift; sourceTree = "<group>"; };
+		BEF0BDA6293D708300A2F5F3 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		BEF0BDA8293D766F00A2F5F3 /* ReadBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBookmarkViewController.swift; sourceTree = "<group>"; };
+		BEF0BDAA293D78D800A2F5F3 /* OpenedBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedBookmarkViewController.swift; sourceTree = "<group>"; };
+		BEF1746D2936E86F0095339A /* SearchGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGridCell.swift; sourceTree = "<group>"; };
+		BEF1746F2937F1EA0095339A /* SearchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsViewController.swift; sourceTree = "<group>"; };
+		BEF20AC4293AA76A00942D96 /* SearchDetailsGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsGridCell.swift; sourceTree = "<group>"; };
+		BEF20AC6293AADC000942D96 /* BorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
 		BEFA24232922FEB20039B780 /* SignInOrUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOrUpViewController.swift; sourceTree = "<group>"; };
 		BEFA24252923060B0039B780 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BEFA2427292307D10039B780 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +183,16 @@
 				BE1A7BAF292D48C100502047 /* BookDetailsViewController.swift */,
 				BE1A7BB1292D608700502047 /* ReadViewController.swift */,
 				BEC06CD92935749E00DB95EE /* SearchViewController.swift */,
+				BEF1746D2936E86F0095339A /* SearchGridCell.swift */,
+				BEF1746F2937F1EA0095339A /* SearchDetailsViewController.swift */,
+				BEF20AC4293AA76A00942D96 /* SearchDetailsGridCell.swift */,
+				BEF20AC6293AADC000942D96 /* BorrowViewController.swift */,
+				BEF0BDA0293D306600A2F5F3 /* FavoritesGridCell.swift */,
+				BEF0BDA4293D6FA700A2F5F3 /* BookmarkGridCell.swift */,
+				BEF0BDA6293D708300A2F5F3 /* BookmarkViewController.swift */,
+				BEF0BDA8293D766F00A2F5F3 /* ReadBookmarkViewController.swift */,
+				BEF0BDAA293D78D800A2F5F3 /* OpenedBookmarkViewController.swift */,
+				BE238686293EBA1F005EB536 /* ConfirmDeleteViewController.swift */,
 			);
 			path = LibsterApp;
 			sourceTree = "<group>";
@@ -417,17 +447,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEFA2428292307D10039B780 /* SignUpViewController.swift in Sources */,
+				BEF0BDA5293D6FA700A2F5F3 /* BookmarkGridCell.swift in Sources */,
+				BE238687293EBA1F005EB536 /* ConfirmDeleteViewController.swift in Sources */,
 				BE4115DA2924AB2400EA117E /* DashViewController.swift in Sources */,
+				BEF0BDA7293D708300A2F5F3 /* BookmarkViewController.swift in Sources */,
+				BEF0BDA9293D766F00A2F5F3 /* ReadBookmarkViewController.swift in Sources */,
 				BE1A7BB0292D48C100502047 /* BookDetailsViewController.swift in Sources */,
+				BEF174702937F1EA0095339A /* SearchDetailsViewController.swift in Sources */,
 				BE1A7BB2292D608800502047 /* ReadViewController.swift in Sources */,
 				BEACE22429199E14002171A6 /* AppDelegate.swift in Sources */,
 				BE1F7A212919A16800555ED1 /* TestViewController.swift in Sources */,
 				BEC06CDA2935749E00DB95EE /* SearchViewController.swift in Sources */,
+				BEF0BDA1293D306600A2F5F3 /* FavoritesGridCell.swift in Sources */,
+				BEF1746E2936E86F0095339A /* SearchGridCell.swift in Sources */,
+				BEF0BDAB293D78D800A2F5F3 /* OpenedBookmarkViewController.swift in Sources */,
 				BEFA24242922FEB20039B780 /* SignInOrUpViewController.swift in Sources */,
 				BEFA24262923060B0039B780 /* SignInViewController.swift in Sources */,
 				BE67B56F292D1A1700CD6377 /* ProfileViewController.swift in Sources */,
+				BEF20AC5293AA76A00942D96 /* SearchDetailsGridCell.swift in Sources */,
 				BE67B571292D226D00CD6377 /* BookGridCell.swift in Sources */,
 				BEACE22629199E14002171A6 /* SceneDelegate.swift in Sources */,
+				BEF20AC7293AADC000942D96 /* BorrowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
