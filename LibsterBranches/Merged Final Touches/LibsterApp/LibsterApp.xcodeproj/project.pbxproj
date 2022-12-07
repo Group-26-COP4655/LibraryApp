@@ -1,0 +1,807 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B4C687E844398E936E4B4AB /* libPods-LibsterAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39847784D085EC446DC93525 /* libPods-LibsterAppUITests.a */; };
+		BE1A7BB0292D48C100502047 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A7BAF292D48C100502047 /* BookDetailsViewController.swift */; };
+		BE1A7BB2292D608800502047 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A7BB1292D608700502047 /* ReadViewController.swift */; };
+		BE1F7A212919A16800555ED1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F7A202919A16800555ED1 /* TestViewController.swift */; };
+		BE238687293EBA1F005EB536 /* ConfirmDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE238686293EBA1F005EB536 /* ConfirmDeleteViewController.swift */; };
+		BE4115DA2924AB2400EA117E /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4115D92924AB2400EA117E /* DashViewController.swift */; };
+		BE67B56F292D1A1700CD6377 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */; };
+		BE67B571292D226D00CD6377 /* BookGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67B570292D226D00CD6377 /* BookGridCell.swift */; };
+		BEACE22429199E14002171A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE22329199E14002171A6 /* AppDelegate.swift */; };
+		BEACE22629199E14002171A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE22529199E14002171A6 /* SceneDelegate.swift */; };
+		BEACE22B29199E14002171A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEACE22929199E14002171A6 /* Main.storyboard */; };
+		BEACE22D29199E1E002171A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEACE22C29199E1E002171A6 /* Assets.xcassets */; };
+		BEACE23029199E1E002171A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEACE22E29199E1E002171A6 /* LaunchScreen.storyboard */; };
+		BEACE23B29199E1F002171A6 /* LibsterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE23A29199E1F002171A6 /* LibsterAppTests.swift */; };
+		BEACE24629199E1F002171A6 /* LibsterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEACE24529199E1F002171A6 /* LibsterAppUITests.swift */; };
+		BEC06CDA2935749E00DB95EE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC06CD92935749E00DB95EE /* SearchViewController.swift */; };
+		BEF0BDA1293D306600A2F5F3 /* FavoritesGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0BDA0293D306600A2F5F3 /* FavoritesGridCell.swift */; };
+		BEF0BDA5293D6FA700A2F5F3 /* BookmarkGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0BDA4293D6FA700A2F5F3 /* BookmarkGridCell.swift */; };
+		BEF0BDA7293D708300A2F5F3 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0BDA6293D708300A2F5F3 /* BookmarkViewController.swift */; };
+		BEF0BDA9293D766F00A2F5F3 /* ReadBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0BDA8293D766F00A2F5F3 /* ReadBookmarkViewController.swift */; };
+		BEF0BDAB293D78D800A2F5F3 /* OpenedBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0BDAA293D78D800A2F5F3 /* OpenedBookmarkViewController.swift */; };
+		BEF1746E2936E86F0095339A /* SearchGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF1746D2936E86F0095339A /* SearchGridCell.swift */; };
+		BEF174702937F1EA0095339A /* SearchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF1746F2937F1EA0095339A /* SearchDetailsViewController.swift */; };
+		BEF20AC5293AA76A00942D96 /* SearchDetailsGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF20AC4293AA76A00942D96 /* SearchDetailsGridCell.swift */; };
+		BEF20AC7293AADC000942D96 /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF20AC6293AADC000942D96 /* BorrowViewController.swift */; };
+		BEFA24242922FEB20039B780 /* SignInOrUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA24232922FEB20039B780 /* SignInOrUpViewController.swift */; };
+		BEFA24262923060B0039B780 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA24252923060B0039B780 /* SignInViewController.swift */; };
+		BEFA2428292307D10039B780 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA2427292307D10039B780 /* SignUpViewController.swift */; };
+		CBEAE57A2C7C8BF8C5962E62 /* libPods-LibsterAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C5FA0C457794D557C17CDE /* libPods-LibsterAppTests.a */; };
+		FF4D52B71D46034E6CFE853B /* Pods_LibsterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59595E4311B06CC4159FD6F /* Pods_LibsterApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEACE23729199E1F002171A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEACE21829199E14002171A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEACE21F29199E14002171A6;
+			remoteInfo = LibsterApp;
+		};
+		BEACE24229199E1F002171A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEACE21829199E14002171A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEACE21F29199E14002171A6;
+			remoteInfo = LibsterApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35AEEB0A2EDE782025844F3F /* Pods-LibsterAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibsterAppUITests.release.xcconfig"; path = "Target Support Files/Pods-LibsterAppUITests/Pods-LibsterAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		39847784D085EC446DC93525 /* libPods-LibsterAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LibsterAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39D0D4F88262D504BF3CF024 /* Pods-LibsterAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibsterAppTests.debug.xcconfig"; path = "Target Support Files/Pods-LibsterAppTests/Pods-LibsterAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F332F0650A3314D76B53325 /* Pods-LibsterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibsterApp.release.xcconfig"; path = "Target Support Files/Pods-LibsterApp/Pods-LibsterApp.release.xcconfig"; sourceTree = "<group>"; };
+		6EC69537B5D00C8BF0D61331 /* Pods-LibsterAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibsterAppTests.release.xcconfig"; path = "Target Support Files/Pods-LibsterAppTests/Pods-LibsterAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		83E251FD8D1489A6AD97B7A1 /* Pods-LibsterAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibsterAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-LibsterAppUITests/Pods-LibsterAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0C5FA0C457794D557C17CDE /* libPods-LibsterAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LibsterAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59595E4311B06CC4159FD6F /* Pods_LibsterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibsterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1A7BAF292D48C100502047 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
+		BE1A7BB1292D608700502047 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		BE1F7A202919A16800555ED1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		BE238686293EBA1F005EB536 /* ConfirmDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeleteViewController.swift; sourceTree = "<group>"; };
+		BE4115D92924AB2400EA117E /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
+		BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BE67B570292D226D00CD6377 /* BookGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookGridCell.swift; sourceTree = "<group>"; };
+		BEACE22029199E14002171A6 /* LibsterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibsterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEACE22329199E14002171A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BEACE22529199E14002171A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BEACE22A29199E14002171A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BEACE22C29199E1E002171A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEACE22F29199E1E002171A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEACE23129199E1E002171A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEACE23629199E1F002171A6 /* LibsterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibsterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEACE23A29199E1F002171A6 /* LibsterAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibsterAppTests.swift; sourceTree = "<group>"; };
+		BEACE23C29199E1F002171A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEACE24129199E1F002171A6 /* LibsterAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibsterAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEACE24529199E1F002171A6 /* LibsterAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibsterAppUITests.swift; sourceTree = "<group>"; };
+		BEACE24729199E1F002171A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC06CD92935749E00DB95EE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BEF0BDA0293D306600A2F5F3 /* FavoritesGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesGridCell.swift; sourceTree = "<group>"; };
+		BEF0BDA4293D6FA700A2F5F3 /* BookmarkGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkGridCell.swift; sourceTree = "<group>"; };
+		BEF0BDA6293D708300A2F5F3 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		BEF0BDA8293D766F00A2F5F3 /* ReadBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBookmarkViewController.swift; sourceTree = "<group>"; };
+		BEF0BDAA293D78D800A2F5F3 /* OpenedBookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedBookmarkViewController.swift; sourceTree = "<group>"; };
+		BEF1746D2936E86F0095339A /* SearchGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGridCell.swift; sourceTree = "<group>"; };
+		BEF1746F2937F1EA0095339A /* SearchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsViewController.swift; sourceTree = "<group>"; };
+		BEF20AC4293AA76A00942D96 /* SearchDetailsGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsGridCell.swift; sourceTree = "<group>"; };
+		BEF20AC6293AADC000942D96 /* BorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
+		BEFA24232922FEB20039B780 /* SignInOrUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOrUpViewController.swift; sourceTree = "<group>"; };
+		BEFA24252923060B0039B780 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BEFA2427292307D10039B780 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D6E693B15497F5A19F369253 /* Pods-LibsterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibsterApp.debug.xcconfig"; path = "Target Support Files/Pods-LibsterApp/Pods-LibsterApp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEACE21D29199E14002171A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF4D52B71D46034E6CFE853B /* Pods_LibsterApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEACE23329199E1F002171A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBEAE57A2C7C8BF8C5962E62 /* libPods-LibsterAppTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEACE23E29199E1F002171A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4C687E844398E936E4B4AB /* libPods-LibsterAppUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E1BDFBCBB27F1F57727383A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6E693B15497F5A19F369253 /* Pods-LibsterApp.debug.xcconfig */,
+				4F332F0650A3314D76B53325 /* Pods-LibsterApp.release.xcconfig */,
+				39D0D4F88262D504BF3CF024 /* Pods-LibsterAppTests.debug.xcconfig */,
+				6EC69537B5D00C8BF0D61331 /* Pods-LibsterAppTests.release.xcconfig */,
+				83E251FD8D1489A6AD97B7A1 /* Pods-LibsterAppUITests.debug.xcconfig */,
+				35AEEB0A2EDE782025844F3F /* Pods-LibsterAppUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BEACE21729199E14002171A6 = {
+			isa = PBXGroup;
+			children = (
+				BEACE22229199E14002171A6 /* LibsterApp */,
+				BEACE23929199E1F002171A6 /* LibsterAppTests */,
+				BEACE24429199E1F002171A6 /* LibsterAppUITests */,
+				BEACE22129199E14002171A6 /* Products */,
+				4E1BDFBCBB27F1F57727383A /* Pods */,
+				C554857751CA8A075D4B6D7B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BEACE22129199E14002171A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEACE22029199E14002171A6 /* LibsterApp.app */,
+				BEACE23629199E1F002171A6 /* LibsterAppTests.xctest */,
+				BEACE24129199E1F002171A6 /* LibsterAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEACE22229199E14002171A6 /* LibsterApp */ = {
+			isa = PBXGroup;
+			children = (
+				BEACE22329199E14002171A6 /* AppDelegate.swift */,
+				BEACE22529199E14002171A6 /* SceneDelegate.swift */,
+				BEACE22929199E14002171A6 /* Main.storyboard */,
+				BEACE22C29199E1E002171A6 /* Assets.xcassets */,
+				BEACE22E29199E1E002171A6 /* LaunchScreen.storyboard */,
+				BEACE23129199E1E002171A6 /* Info.plist */,
+				BE1F7A202919A16800555ED1 /* TestViewController.swift */,
+				BEFA24232922FEB20039B780 /* SignInOrUpViewController.swift */,
+				BEFA24252923060B0039B780 /* SignInViewController.swift */,
+				BEFA2427292307D10039B780 /* SignUpViewController.swift */,
+				BE4115D92924AB2400EA117E /* DashViewController.swift */,
+				BE67B56E292D1A1700CD6377 /* ProfileViewController.swift */,
+				BE67B570292D226D00CD6377 /* BookGridCell.swift */,
+				BE1A7BAF292D48C100502047 /* BookDetailsViewController.swift */,
+				BE1A7BB1292D608700502047 /* ReadViewController.swift */,
+				BEC06CD92935749E00DB95EE /* SearchViewController.swift */,
+				BEF1746D2936E86F0095339A /* SearchGridCell.swift */,
+				BEF1746F2937F1EA0095339A /* SearchDetailsViewController.swift */,
+				BEF20AC4293AA76A00942D96 /* SearchDetailsGridCell.swift */,
+				BEF20AC6293AADC000942D96 /* BorrowViewController.swift */,
+				BEF0BDA0293D306600A2F5F3 /* FavoritesGridCell.swift */,
+				BEF0BDA4293D6FA700A2F5F3 /* BookmarkGridCell.swift */,
+				BEF0BDA6293D708300A2F5F3 /* BookmarkViewController.swift */,
+				BEF0BDA8293D766F00A2F5F3 /* ReadBookmarkViewController.swift */,
+				BEF0BDAA293D78D800A2F5F3 /* OpenedBookmarkViewController.swift */,
+				BE238686293EBA1F005EB536 /* ConfirmDeleteViewController.swift */,
+			);
+			path = LibsterApp;
+			sourceTree = "<group>";
+		};
+		BEACE23929199E1F002171A6 /* LibsterAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEACE23A29199E1F002171A6 /* LibsterAppTests.swift */,
+				BEACE23C29199E1F002171A6 /* Info.plist */,
+			);
+			path = LibsterAppTests;
+			sourceTree = "<group>";
+		};
+		BEACE24429199E1F002171A6 /* LibsterAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BEACE24529199E1F002171A6 /* LibsterAppUITests.swift */,
+				BEACE24729199E1F002171A6 /* Info.plist */,
+			);
+			path = LibsterAppUITests;
+			sourceTree = "<group>";
+		};
+		C554857751CA8A075D4B6D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B59595E4311B06CC4159FD6F /* Pods_LibsterApp.framework */,
+				B0C5FA0C457794D557C17CDE /* libPods-LibsterAppTests.a */,
+				39847784D085EC446DC93525 /* libPods-LibsterAppUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEACE21F29199E14002171A6 /* LibsterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEACE24A29199E1F002171A6 /* Build configuration list for PBXNativeTarget "LibsterApp" */;
+			buildPhases = (
+				62DF98DBB917A2CF48BA4260 /* [CP] Check Pods Manifest.lock */,
+				BEACE21C29199E14002171A6 /* Sources */,
+				BEACE21D29199E14002171A6 /* Frameworks */,
+				BEACE21E29199E14002171A6 /* Resources */,
+				99BB3340C5C9370146A2CBAE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibsterApp;
+			productName = LibsterApp;
+			productReference = BEACE22029199E14002171A6 /* LibsterApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEACE23529199E1F002171A6 /* LibsterAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEACE24D29199E1F002171A6 /* Build configuration list for PBXNativeTarget "LibsterAppTests" */;
+			buildPhases = (
+				14A57F1320E6B9BAD8E309C3 /* [CP] Check Pods Manifest.lock */,
+				BEACE23229199E1F002171A6 /* Sources */,
+				BEACE23329199E1F002171A6 /* Frameworks */,
+				BEACE23429199E1F002171A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEACE23829199E1F002171A6 /* PBXTargetDependency */,
+			);
+			name = LibsterAppTests;
+			productName = LibsterAppTests;
+			productReference = BEACE23629199E1F002171A6 /* LibsterAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BEACE24029199E1F002171A6 /* LibsterAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEACE25029199E1F002171A6 /* Build configuration list for PBXNativeTarget "LibsterAppUITests" */;
+			buildPhases = (
+				90E012CE85C26EC78F5A344E /* [CP] Check Pods Manifest.lock */,
+				BEACE23D29199E1F002171A6 /* Sources */,
+				BEACE23E29199E1F002171A6 /* Frameworks */,
+				BEACE23F29199E1F002171A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEACE24329199E1F002171A6 /* PBXTargetDependency */,
+			);
+			name = LibsterAppUITests;
+			productName = LibsterAppUITests;
+			productReference = BEACE24129199E1F002171A6 /* LibsterAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEACE21829199E14002171A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = Geo;
+				TargetAttributes = {
+					BEACE21F29199E14002171A6 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					BEACE23529199E1F002171A6 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = BEACE21F29199E14002171A6;
+					};
+					BEACE24029199E1F002171A6 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = BEACE21F29199E14002171A6;
+					};
+				};
+			};
+			buildConfigurationList = BEACE21B29199E14002171A6 /* Build configuration list for PBXProject "LibsterApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEACE21729199E14002171A6;
+			productRefGroup = BEACE22129199E14002171A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEACE21F29199E14002171A6 /* LibsterApp */,
+				BEACE23529199E1F002171A6 /* LibsterAppTests */,
+				BEACE24029199E1F002171A6 /* LibsterAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEACE21E29199E14002171A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEACE23029199E1E002171A6 /* LaunchScreen.storyboard in Resources */,
+				BEACE22D29199E1E002171A6 /* Assets.xcassets in Resources */,
+				BEACE22B29199E14002171A6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEACE23429199E1F002171A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEACE23F29199E1F002171A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14A57F1320E6B9BAD8E309C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LibsterAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62DF98DBB917A2CF48BA4260 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LibsterApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90E012CE85C26EC78F5A344E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LibsterAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99BB3340C5C9370146A2CBAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibsterApp/Pods-LibsterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibsterApp/Pods-LibsterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibsterApp/Pods-LibsterApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEACE21C29199E14002171A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEFA2428292307D10039B780 /* SignUpViewController.swift in Sources */,
+				BEF0BDA5293D6FA700A2F5F3 /* BookmarkGridCell.swift in Sources */,
+				BE238687293EBA1F005EB536 /* ConfirmDeleteViewController.swift in Sources */,
+				BE4115DA2924AB2400EA117E /* DashViewController.swift in Sources */,
+				BEF0BDA7293D708300A2F5F3 /* BookmarkViewController.swift in Sources */,
+				BEF0BDA9293D766F00A2F5F3 /* ReadBookmarkViewController.swift in Sources */,
+				BE1A7BB0292D48C100502047 /* BookDetailsViewController.swift in Sources */,
+				BEF174702937F1EA0095339A /* SearchDetailsViewController.swift in Sources */,
+				BE1A7BB2292D608800502047 /* ReadViewController.swift in Sources */,
+				BEACE22429199E14002171A6 /* AppDelegate.swift in Sources */,
+				BE1F7A212919A16800555ED1 /* TestViewController.swift in Sources */,
+				BEC06CDA2935749E00DB95EE /* SearchViewController.swift in Sources */,
+				BEF0BDA1293D306600A2F5F3 /* FavoritesGridCell.swift in Sources */,
+				BEF1746E2936E86F0095339A /* SearchGridCell.swift in Sources */,
+				BEF0BDAB293D78D800A2F5F3 /* OpenedBookmarkViewController.swift in Sources */,
+				BEFA24242922FEB20039B780 /* SignInOrUpViewController.swift in Sources */,
+				BEFA24262923060B0039B780 /* SignInViewController.swift in Sources */,
+				BE67B56F292D1A1700CD6377 /* ProfileViewController.swift in Sources */,
+				BEF20AC5293AA76A00942D96 /* SearchDetailsGridCell.swift in Sources */,
+				BE67B571292D226D00CD6377 /* BookGridCell.swift in Sources */,
+				BEACE22629199E14002171A6 /* SceneDelegate.swift in Sources */,
+				BEF20AC7293AADC000942D96 /* BorrowViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEACE23229199E1F002171A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEACE23B29199E1F002171A6 /* LibsterAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEACE23D29199E1F002171A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEACE24629199E1F002171A6 /* LibsterAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEACE23829199E1F002171A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEACE21F29199E14002171A6 /* LibsterApp */;
+			targetProxy = BEACE23729199E1F002171A6 /* PBXContainerItemProxy */;
+		};
+		BEACE24329199E1F002171A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEACE21F29199E14002171A6 /* LibsterApp */;
+			targetProxy = BEACE24229199E1F002171A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BEACE22929199E14002171A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEACE22A29199E14002171A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BEACE22E29199E1E002171A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEACE22F29199E1E002171A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEACE24829199E1F002171A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEACE24929199E1F002171A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEACE24B29199E1F002171A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6E693B15497F5A19F369253 /* Pods-LibsterApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TY8KK58N7;
+				INFOPLIST_FILE = LibsterApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = COP4655.LibsterApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEACE24C29199E1F002171A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F332F0650A3314D76B53325 /* Pods-LibsterApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TY8KK58N7;
+				INFOPLIST_FILE = LibsterApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = COP4655.LibsterApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEACE24E29199E1F002171A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39D0D4F88262D504BF3CF024 /* Pods-LibsterAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TY8KK58N7;
+				INFOPLIST_FILE = LibsterAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = COP4655.LibsterAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LibsterApp.app/LibsterApp";
+			};
+			name = Debug;
+		};
+		BEACE24F29199E1F002171A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC69537B5D00C8BF0D61331 /* Pods-LibsterAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TY8KK58N7;
+				INFOPLIST_FILE = LibsterAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = COP4655.LibsterAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LibsterApp.app/LibsterApp";
+			};
+			name = Release;
+		};
+		BEACE25129199E1F002171A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83E251FD8D1489A6AD97B7A1 /* Pods-LibsterAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TY8KK58N7;
+				INFOPLIST_FILE = LibsterAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = COP4655.LibsterAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LibsterApp;
+			};
+			name = Debug;
+		};
+		BEACE25229199E1F002171A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35AEEB0A2EDE782025844F3F /* Pods-LibsterAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TY8KK58N7;
+				INFOPLIST_FILE = LibsterAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = COP4655.LibsterAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LibsterApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEACE21B29199E14002171A6 /* Build configuration list for PBXProject "LibsterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEACE24829199E1F002171A6 /* Debug */,
+				BEACE24929199E1F002171A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEACE24A29199E1F002171A6 /* Build configuration list for PBXNativeTarget "LibsterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEACE24B29199E1F002171A6 /* Debug */,
+				BEACE24C29199E1F002171A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEACE24D29199E1F002171A6 /* Build configuration list for PBXNativeTarget "LibsterAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEACE24E29199E1F002171A6 /* Debug */,
+				BEACE24F29199E1F002171A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEACE25029199E1F002171A6 /* Build configuration list for PBXNativeTarget "LibsterAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEACE25129199E1F002171A6 /* Debug */,
+				BEACE25229199E1F002171A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEACE21829199E14002171A6 /* Project object */;
+}
