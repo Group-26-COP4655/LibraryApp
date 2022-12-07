@@ -603,3 +603,20 @@ Open Library
 
 - ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26f.gif)
 
+The above gif was split into the following eight pieces to preserve the size of the recording windiw:
+
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26fp1.gif)
+
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26fp2.gif)
+
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26fp3.gif)
+
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26fp4.gif)
+
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26fp5.gif)
+
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26fp6.gif)
+
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26fp7.gif)
+
+- ![](https://github.com/Group-26-COP4655/LibraryApp/blob/main/group26fp8.gif)
