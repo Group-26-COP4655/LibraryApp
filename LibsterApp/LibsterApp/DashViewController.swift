@@ -45,17 +45,17 @@ class DashViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        let tempObjID = userObj.objectId!
-//        let queryTwo = PFQuery(className:"_User")
-//
-//        queryTwo.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
-//             if let error = error {
-//                print(error.localizedDescription)
-//             } else if let userFields = userFields {
-//                self.books = userFields["borrowedBooks"] as! [[String:Any]]
-//                self.libCollectionView.reloadData()
-//             }
-//        }
+        let tempObjID = userObj.objectId!
+        let queryTwo = PFQuery(className:"_User")
+
+        queryTwo.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
+             if let error = error {
+                print(error.localizedDescription)
+             } else if let userFields = userFields {
+                self.books = userFields["borrowedBooks"] as! [[String:Any]]
+                self.libCollectionView.reloadData()
+             }
+        }
     }
     
     

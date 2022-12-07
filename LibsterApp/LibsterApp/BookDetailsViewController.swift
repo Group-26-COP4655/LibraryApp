@@ -34,6 +34,29 @@ class BookDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+//    func loadFavorites() {
+//        let tempUserObj = PFUser.current()!
+//        let tempObjID = tempUserObj.objectId!
+//
+//        let query = PFQuery(className:"_User")
+//        query.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
+//             if let error = error {
+//                print(error.localizedDescription)
+//             } else if let userFields = userFields {
+//                self.sessionFavorites = userFields["favorites"] as! [NSDictionary]
+//                let sessionFavorites = userFields["favorites"] as! [NSDictionary]
+//
+//            }
+//        }
+//    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         isFavorited()
         
         let coverUrl = book["cover"] as! String
@@ -70,35 +93,19 @@ class BookDetailsViewController: UIViewController {
         let tempUserObjThree = PFUser.current()!
         let tempObjIDThree = tempUserObjThree.objectId!
         let queryThree = PFQuery(className:"_User")
-       
+        
         queryThree.getObjectInBackground(withId: tempObjIDThree) { (userFields: PFObject?, error: Error?) in
-            if let error = error {
-               print(error.localizedDescription)
-            } else if let userFields = userFields {
-                let temprBorrowedBooks = userFields["borrowedBooks"] as! [NSDictionary]
-                let temprCurrentBookIndex = self.findBook(temprBorrowedBooks)
-                let temprCurrentBook = temprBorrowedBooks[temprCurrentBookIndex]
-                let userRating = Int(temprCurrentBook["userRating"] as! String)
-                self.setRating(userRating!)
-           }
+             if let error = error {
+                print(error.localizedDescription)
+             } else if let userFields = userFields {
+                 let temprBorrowedBooks = userFields["borrowedBooks"] as! [NSDictionary]
+                 let temprCurrentBookIndex = self.findBook(temprBorrowedBooks)
+                 let temprCurrentBook = temprBorrowedBooks[temprCurrentBookIndex]
+                 let userRating = Int(temprCurrentBook["userRating"] as! String)
+                 self.setRating(userRating!)
+            }
         }
     }
-    
-//    func loadFavorites() {
-//        let tempUserObj = PFUser.current()!
-//        let tempObjID = tempUserObj.objectId!
-//
-//        let query = PFQuery(className:"_User")
-//        query.getObjectInBackground(withId: tempObjID) { (userFields: PFObject?, error: Error?) in
-//             if let error = error {
-//                print(error.localizedDescription)
-//             } else if let userFields = userFields {
-//                self.sessionFavorites = userFields["favorites"] as! [NSDictionary]
-//                let sessionFavorites = userFields["favorites"] as! [NSDictionary]
-//
-//            }
-//        }
-//    }
     
     
     func isFavorited() {
@@ -345,8 +352,14 @@ class BookDetailsViewController: UIViewController {
                          if let error = error {
                             print(error.localizedDescription)
                          } else if let userFields = userFields {
-                           userFields["userRating"] = toRate
-                           userFields.saveInBackground()
+                            
+                            var bookChangeArray = userFields["borrowedBooks"] as! [[String: Any]]
+                            let tempBorrowedArray = userFields["borrowedBooks"] as! [NSDictionary]
+                            let tempBookIndex = self.findBook(tempBorrowedArray)
+                            
+                            bookChangeArray[tempBookIndex]["userRating"] = String(toRate)
+                            userFields["borrowedBooks"] = bookChangeArray
+                            userFields.saveInBackground()
                         }
                     }
                 }

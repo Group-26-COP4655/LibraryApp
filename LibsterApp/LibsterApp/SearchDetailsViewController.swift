@@ -113,7 +113,7 @@ class SearchDetailsViewController: UIViewController, UICollectionViewDataSource,
                         tempObj["rating"] = book["rating"]
                         tempObj["readers"] = book["readers"]
                     }
-                    print(tempObj)
+                    
                     self.selectedBook.append((tempObj as NSDictionary))
                     self.searchDetailsCollectionView.reloadData()
                 } catch {
